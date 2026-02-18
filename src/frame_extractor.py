@@ -1,6 +1,6 @@
 import cv2
 import os, shutil
-from sprite_detector import sprite_detector
+from sprite_detector import SpriteDetector
 
 def extract_all_frames(video_path : str, folder_for_frames : str = "./ressources/frames", save_frames : bool = False):
     """
@@ -19,7 +19,7 @@ def extract_all_frames(video_path : str, folder_for_frames : str = "./ressources
         return
     print("Extracting '" + video_path +"' frames...")
 
-    detector = sprite_detector()
+    detector = SpriteDetector()
 
     if save_frames and not os.path.exists(folder_for_frames):
         os.makedirs(folder_for_frames)
@@ -29,6 +29,9 @@ def extract_all_frames(video_path : str, folder_for_frames : str = "./ressources
     i = 1
 
     while(capture.isOpened):
+        if i % 10000 == 0:
+            print("Analyzed " + str(i) + " frames...")
+
         has_more_frames, frame = capture.read()
         if has_more_frames == False:
             break

@@ -2,3 +2,5 @@ src/*pycache*
 /.venv/
 /.idea/
 /data/
+/ressources/audios/
+/ressources/videos/

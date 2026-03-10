@@ -1,7 +1,4 @@
 src/*pycache*
 /.venv/
 /.idea/
-/ressources/audios/
-/ressources/sound_matches/
-/ressources/sounds/
-/ressources/videos/
+/data/

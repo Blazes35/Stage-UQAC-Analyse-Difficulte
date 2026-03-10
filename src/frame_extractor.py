@@ -19,7 +19,7 @@ def extract_all_frames(video_path : str, folder_for_frames : str = "./ressources
         return
     print("Extracting '" + video_path +"' frames...")
 
-    detector = SpriteDetector()
+    detector = SpriteDetector(1)
 
     if save_frames and not os.path.exists(folder_for_frames):
         os.makedirs(folder_for_frames)

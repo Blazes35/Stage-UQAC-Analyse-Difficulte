@@ -1,5 +1,6 @@
 import cv2
 import numpy as np
+import csv
 from typing import cast
 
 class SpriteDetector:
@@ -16,10 +17,10 @@ class SpriteDetector:
     MATCH_THRESHOLD = 0.5
     PROJECTION_THRESHOLD = 50
 
-    TITLE_SCREEN_PATH = "./ressources/title_screen.png"
-    GOOMBA_TEMPLATE_PATH = "./ressources/goomba1.png"
+    TITLE_SCREEN_PATH = "./ressources/sprite_templates/title_screen.png"
+    GOOMBA_TEMPLATE_PATH = "./ressources/sprite_templates/goomba1.png"
 
-    def __init__(self):
+    def __init__(self, video_id: int):
         """
         Initializes the detector and preloads required templates.
 
@@ -33,6 +34,7 @@ class SpriteDetector:
         self.is_ready = False
         self.last_death_frame = -1
         self.death_count = 0
+        self.video_id = video_id
 
         title_screen = cv2.imread(
             self.TITLE_SCREEN_PATH,
@@ -57,6 +59,10 @@ class SpriteDetector:
         if mario_dead_template is None:
             raise RuntimeError("Could not load mario dead template")
         self.mario_dead_template = cast(np.ndarray, mario_dead_template)
+
+        with open("./data/deaths.csv", "a", newline='') as death_file:
+            fieldnames = ["number", "type", "frame", "video_id"]
+            self.writer = csv.DictWriter(death_file, fieldnames=fieldnames)
 
     def analyze(self, image: np.ndarray, frame_number: int):
         """
@@ -185,6 +191,16 @@ class SpriteDetector:
         self.death_count += 1
 
         print(f"Death detected at frame {frame_number}, death count: {self.death_count}")
+
+        with open("./data/deaths.csv", "a", newline='') as death_file:
+            fieldnames = ["number", "type", "frame", "video_id"]
+            writer = csv.DictWriter(death_file, fieldnames=fieldnames)
+            writer.writerow({
+                "number": self.death_count,
+                "type": "enemy",
+                "frame": frame_number,
+                "video_id": self.video_id
+            })
         #for i, (y, x) in enumerate(zip(*locations)):
         #    print(
         #        f"  Sprite {i + 1}: Position ({x}, {y}), "

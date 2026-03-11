@@ -23,3 +23,5 @@ def convert_file(input_file, output_file="", audio_stream=0, can_overwrite=False
     ]
 
     subprocess.run(command, check=True)
+
+convert_file("LongVideo.mp4")

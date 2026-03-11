@@ -1,6 +1,4 @@
 import os
-
-
 from scipy import signal
 import librosa
 import numpy as np
@@ -86,9 +84,6 @@ def find_audio_patterns(main_audio_path, template_path, threshold_ratio=0.6, min
     plt.show()
 
     return matches
-
-
-# convert_file("LongVideo.mp4")
 
 results = find_audio_patterns(
     'LongVideo.wav',

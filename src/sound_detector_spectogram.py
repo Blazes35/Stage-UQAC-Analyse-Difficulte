@@ -5,6 +5,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import signal
 
+from trim_template import optimize_template
+
 
 def find_audio_patterns_spectrogram(main_audio_path, template_path, threshold=0.55, min_dist_seconds=1.0):
     # 1. Load the audio files
@@ -106,8 +108,11 @@ def find_audio_patterns_spectrogram(main_audio_path, template_path, threshold=0.
 # Note: The threshold usually needs to be tweaked for spectrograms.
 # 0.5 to 0.65 is usually a very strong match for TM_CCOEFF_NORMED.
 results = find_audio_patterns_spectrogram(
-    'LongVideo.wav',
+    'Super Mario Bros.wav',
     'mario_death.wav',
     threshold=0.55,
     min_dist_seconds=1.0
 )
+
+# Run it on your Mario death sound
+optimize_template("mario_death.wav", "mario_death_trimmed.wav", top_db=30)

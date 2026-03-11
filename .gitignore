@@ -2,5 +2,9 @@ src/*pycache*
 /.venv/
 /.idea/
 /data/
-/ressources/audios/
-/ressources/videos/
+/ressources/audios/**
+/ressources/videos/**
+/ressources/sound_matches/**
+/ressources/sounds/**
+
+!.gitkeep

@@ -11,8 +11,13 @@ import matplotlib.pyplot as plt
 def find_audio_patterns(main_audio_path, template_path, threshold_ratio=0.6, min_dist_seconds=1.0):
     # 1. Load the audio files
     print("Loading audio files...")
-    y_main, sr = librosa.load(main_audio_path, sr=22050)
-    y_template, _ = librosa.load(template_path, sr=22050)
+    main_audio_dir = "ressources/audios"
+    save_main_audio_path = os.path.join(main_audio_dir, main_audio_path)
+    y_main, sr = librosa.load(save_main_audio_path, sr=22050)
+
+    main_audio_dir = "ressources/sounds"
+    save_main_audio_path = os.path.join(main_audio_dir, template_path)
+    y_template, _ = librosa.load(save_main_audio_path, sr=22050)
 
     # 2. Normalize the signals (Volume matching)
     y_main = y_main / np.max(np.abs(y_main))
@@ -22,8 +27,11 @@ def find_audio_patterns(main_audio_path, template_path, threshold_ratio=0.6, min
     print("Computing correlation...")
     correlation = signal.correlate(y_main, y_template, mode='valid', method='fft')
 
-    # Normalize correlation to 0-1 range for consistent thresholding
-    correlation = correlation / np.max(np.abs(correlation))
+    # Calculate the maximum possible score (energy of the template)
+    perfect_match_score = np.sum(y_template ** 2)
+
+    # Normalize against the perfect match, NOT the local maximum
+    correlation = correlation / perfect_match_score
 
     # Convert minimum distance from seconds to samples
     distance_samples = int(min_dist_seconds * sr)
@@ -65,7 +73,7 @@ def find_audio_patterns(main_audio_path, template_path, threshold_ratio=0.6, min
 
     plt.title(f"Audio Matches Found: {len(matches)} occurrences")
     plt.xlabel("Time (Seconds)")  # <--- Changed from Index to Seconds
-    plt.ylabel("Normalized Correlation (0.0 - 1.0)")
+    plt.ylabel("Correlation")
     plt.legend()
     plt.grid(True, alpha=0.3)
 
@@ -87,23 +95,28 @@ def convert_file(input_file, output_file="", audio_stream=0, can_overwrite=False
 
     overwrite='-y' if can_overwrite else '-n'
 
+    input_dir = "ressources/videos"
+    save_input_path = os.path.join(input_dir, input_file)
+    output_dir = "ressources/audios"
+    save_output_path = os.path.join(output_dir, output_file)
+
     command = [
         "ffmpeg",
         overwrite,
-        "-i", input_file,
+        "-i", save_input_path,
         "-map", f"a:{audio_stream}",
         "-ac", "2",
-        output_file
+        save_output_path
     ]
 
     subprocess.run(command, check=True)
 
-# convert_file("mario_gameplay.mp4")
+# convert_file("LongVideo.mp4")
 
 results = find_audio_patterns(
-    'ressources/audios/Super Mario Bros.wav',
-    'ressources/sounds/mario_death.wav',
-    threshold_ratio=0.6,
+    'LongVideo.wav',
+    'mario_death.wav',
+    threshold_ratio=0.14,
     min_dist_seconds=1
 )
 print(results)

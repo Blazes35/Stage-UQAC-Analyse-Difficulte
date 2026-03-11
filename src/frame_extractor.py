@@ -1,7 +1,8 @@
 import cv2
 import os, shutil
+from sprite_detector import SpriteDetector
 
-def extract_all_frames(video_path : str, folder_for_frames : str):
+def extract_all_frames(video_path : str, folder_for_frames : str = "./ressources/frames", save_frames : bool = False):
     """
     Extract all frames with the names "frame[n].jpg" with n the number of the frame in the folder specified
 
@@ -9,14 +10,18 @@ def extract_all_frames(video_path : str, folder_for_frames : str):
     :type video_path: str
     :param folder_for_frames: Path of the folder which will contain all the frames
     :type folder_for_frames: str
+    :param save_frames: If True, save the frames in the folder specified
+    :type save_frames: bool
     """
 
     if not os.path.isfile(video_path) :
         print("The file" + video_path + " was not found")
-        exit
+        return
     print("Extracting '" + video_path +"' frames...")
 
-    if not os.path.exists(folder_for_frames):
+    detector = SpriteDetector(1)
+
+    if save_frames and not os.path.exists(folder_for_frames):
         os.makedirs(folder_for_frames)
         print("Created folder '" + folder_for_frames + "'.")
 
@@ -24,12 +29,19 @@ def extract_all_frames(video_path : str, folder_for_frames : str):
     i = 1
 
     while(capture.isOpened):
-        no_more_frames, frame = capture.read()
-        if no_more_frames == False:
+        if i % 10000 == 0:
+            print("Analyzed " + str(i) + " frames...")
+
+        has_more_frames, frame = capture.read()
+        if has_more_frames == False:
             break
-        frame_name = folder_for_frames + "/frame"+str(i)+".jpg"
-        cv2.imwrite(frame_name, frame)
-        i+=1
+
+        detector.analyze(frame, i)
+        
+        if save_frames:
+            frame_name = folder_for_frames + "/frame"+str(i)+".jpg"
+            cv2.imwrite(frame_name, frame)
+        i += 1
     print ("Total of frames extracted : " + str(i-1))
 
 def delete_all_files_in_folder(folder : str):

@@ -6,38 +6,40 @@ import matplotlib.pyplot as plt
 from scipy import signal
 
 
-def find_audio_patterns_mfcc(main_audio_path, template_path, threshold=0.45, min_dist_seconds=1.0):
-    # 1. Load the audio files
+def find_audio_patterns_hpss_cqt(main_audio_path, template_path, threshold=0.55, min_dist_seconds=3.0):
     print("Loading audio files...")
-    main_audio_dir = "ressources/audios"
-    save_main_audio_path = os.path.join(main_audio_dir, main_audio_path)
-    y_main, sr = librosa.load(save_main_audio_path, sr=22050)
+    y_main, sr = librosa.load(os.path.join("ressources/audios", main_audio_path), sr=22050)
+    y_template, _ = librosa.load(os.path.join("ressources/sounds", template_path), sr=22050)
 
-    template_dir = "ressources/sounds"
-    save_template_path = os.path.join(template_dir, template_path)
-    y_template, _ = librosa.load(save_template_path, sr=22050)
+    # Pre-normalize
+    y_main = y_main / np.max(np.abs(y_main))
+    y_template = y_template / np.max(np.abs(y_template))
 
-    # 2. Extract MFCC Features (The "Acoustic Fingerprint")
-    print("Generating MFCC fingerprints...")
+    # 1. Harmonic-Percussive Source Separation (The Magic Bullet)
+    print("Separating harmonic tones from percussive noise (filtering out fireballs)...")
+    # margin > 1.0 forces the algorithm to be stricter about what it considers a "tone"
+    y_main_harmonic, _ = librosa.effects.hpss(y_main, margin=1.2)
+    y_template_harmonic, _ = librosa.effects.hpss(y_template, margin=1.2)
+
+    # 2. Constant-Q Transform (Pitch/Melody Tracking)
+    print("Generating CQT Musical Spectrograms...")
     hop_length = 256
-    n_mfcc = 20  # Standard number of coefficients for sound recognition
 
-    mfcc_main = librosa.feature.mfcc(y=y_main, sr=sr, n_mfcc=n_mfcc, hop_length=hop_length).astype(np.float32)
-    mfcc_template = librosa.feature.mfcc(y=y_template, sr=sr, n_mfcc=n_mfcc, hop_length=hop_length).astype(np.float32)
+    # Generate the CQT (84 bins = 7 octaves of musical notes)
+    C_main = librosa.cqt(y=y_main_harmonic, sr=sr, hop_length=hop_length, n_bins=84)
+    C_template = librosa.cqt(y=y_template_harmonic, sr=sr, hop_length=hop_length, n_bins=84)
 
-    # 3. The Volume-Invariance Trick
-    # We drop the 0th coefficient (index 0) from both matrices because it represents overall energy/volume.
-    # This ensures a loud explosion doesn't trigger a false positive over a quieter death sound.
-    mfcc_main = mfcc_main[1:, :]
-    mfcc_template = mfcc_template[1:, :]
+    # Convert to Decibels with a fixed reference
+    C_main_db = librosa.amplitude_to_db(np.abs(C_main), ref=1.0).astype(np.float32)
+    C_template_db = librosa.amplitude_to_db(np.abs(C_template), ref=1.0).astype(np.float32)
 
-    # 4. 2D Template Matching
-    print("Performing fingerprint matching...")
-    result = cv2.matchTemplate(mfcc_main, mfcc_template, cv2.TM_CCOEFF_NORMED)
+    # 3. 2D Template Matching
+    print("Performing precise melody matching...")
+    result = cv2.matchTemplate(C_main_db, C_template_db, cv2.TM_CCOEFF_NORMED)
     correlation = result[0]
     correlation[correlation < 0] = 0
 
-    # 5. Find Peaks
+    # 4. Find Peaks (with increased distance to prevent double-counting)
     frames_per_second = sr / hop_length
     distance_frames = int(min_dist_seconds * frames_per_second)
 
@@ -47,7 +49,7 @@ def find_audio_patterns_mfcc(main_audio_path, template_path, threshold=0.45, min
         distance=distance_frames
     )
 
-    # 6. Compile Results
+    # 5. Compile Results
     matches = []
     print(f"\nFound {len(peaks)} matches:")
 
@@ -57,11 +59,11 @@ def find_audio_patterns_mfcc(main_audio_path, template_path, threshold=0.45, min
         matches.append({"time": round(match_time, 2), "score": round(score, 3)})
         print(f" - Time: {match_time:.2f}s | Confidence: {score:.2f}")
 
-    # 7. Plotting
+    # 6. Plotting
     time_axis = np.arange(len(correlation)) / frames_per_second
 
     plt.figure(figsize=(14, 6))
-    plt.plot(time_axis, correlation, label="MFCC Match Confidence", alpha=0.8)
+    plt.plot(time_axis, correlation, label="Melody Match Confidence", alpha=0.8)
 
     if len(peaks) > 0:
         plt.plot(time_axis[peaks], correlation[peaks], "x", color="red", label="Matches", markersize=10,
@@ -87,9 +89,9 @@ def find_audio_patterns_mfcc(main_audio_path, template_path, threshold=0.45, min
 
     return matches
 
-results = find_audio_patterns_mfcc(
+results = find_audio_patterns_hpss_cqt(
     'LongVideo.wav',
     'mario_death.wav',
-    threshold=0.70,
+    threshold=0.40,
     min_dist_seconds=1.0
 )

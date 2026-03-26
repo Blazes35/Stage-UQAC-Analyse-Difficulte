@@ -26,10 +26,11 @@ def extract_all_frames(video_path : str, folder_for_frames : str = "./ressources
         print("Created folder '" + folder_for_frames + "'.")
 
     capture = cv2.VideoCapture(video_path)
-    i = 1
+    i = 0
 
     while(capture.isOpened):
-        if i-1 % 10000 == 0:
+        i += 2
+        if i % 10000 == 0:
             print("Analyzed " + str(i) + " frames...")
 
         capture.read()
@@ -42,7 +43,6 @@ def extract_all_frames(video_path : str, folder_for_frames : str = "./ressources
         if save_frames:
             frame_name = folder_for_frames + "/frame"+str(i)+".jpg"
             cv2.imwrite(frame_name, frame)
-        i += 2
     print ("Total of frames extracted : " + str(i-1))
 
 def delete_all_files_in_folder(folder : str):

@@ -3,6 +3,15 @@ import numpy as np
 import csv
 from typing import cast
 import template_loader as tl
+from dataclasses import dataclass
+
+@dataclass
+class Event:
+    event: str
+    frame: int
+    time_stamp: str
+    level: str
+    video_id: int
 
 class SpriteDetector:
     """
@@ -33,11 +42,14 @@ class SpriteDetector:
         self.last_death_frame = -1
         self.death_count = 0
         self.video_id = video_id
+        self.events = []
 
         self.title_screen = tl.load_title_screen_template()
         self.mario_dead_template = tl.load_dead_template()
         self.mario_templates = tl.load_mario_templates()
         self.level_templates = tl.load_levels_templates()
+        self.blinking_templates = tl.load_blinking_templates()
+        self.other_templates = tl.load_other_templates()
         self.current_level = "1-1"
 
         with open("./data/deaths.csv", "w", newline='') as death_file:
@@ -47,6 +59,10 @@ class SpriteDetector:
         with open("./data/levels.csv", "w", newline='') as level_file:
             fieldnames = ["frame", "level", "video_id"]
             writer = csv.DictWriter(level_file, fieldnames=fieldnames)
+            writer.writeheader()
+        with open("./data/events.csv", "w", newline='') as event_file:
+            fieldnames = ["event", "frame", "time_stamp", "level", "video_id"]
+            writer = csv.DictWriter(event_file, fieldnames=fieldnames)
             writer.writeheader()
 
     def analyze(self, image: np.ndarray, frame_number: int):
@@ -69,6 +85,7 @@ class SpriteDetector:
         cropped = image[self.top:self.bottom, self.left:self.right]
         normalized = self._normalize(cropped)
         self._detect(normalized, frame_number)
+        self.detect_other_sprites(normalized, frame_number)
         if normalized.mean() < 20:
             self._detect_level(normalized, frame_number)
 
@@ -255,6 +272,62 @@ class SpriteDetector:
                     })
                 print(f"Level changed to {self.current_level} at timestamp {frame_to_timestamp(frame_number)}")
             break
+
+    def detect_other_sprites(self, image, frame_number: int):
+        """
+        Detects other sprites in a normalized grayscale frame using
+        template matching.
+
+        All matches above MATCH_THRESHOLD are reported with their
+        coordinates and correlation score.
+
+        Args:
+            image (np.ndarray): Grayscale image (256x224).
+            frame_number (int): Index of the current frame.
+        """
+        for compound_template in self.other_templates:
+            if frame_number - compound_template.last_seen < compound_template.cooldown:
+                continue
+
+            for template in compound_template.templates:
+                
+                result = cv2.matchTemplate(
+                    image,
+                    template,
+                    cv2.TM_CCOEFF_NORMED
+                )
+
+                max_value = np.max(result)
+                if max_value < compound_template.threshold:
+                    continue
+
+                self.events.append(Event(
+                    event=compound_template.action_name,
+                    frame=frame_number,
+                    time_stamp=frame_to_timestamp(frame_number),
+                    level=self.current_level,
+                    video_id=self.video_id
+                ))
+                compound_template.last_seen = frame_number
+                break
+
+    def write_all_events(self):
+        """
+        Writes all detected events to the CSV file.
+        """
+        print(f"Writing {len(self.events)} events to CSV file...")
+        with open("./data/events.csv", "a", newline='') as event_file:
+            fieldnames = ["event", "frame", "time_stamp", "level", "video_id"]
+            writer = csv.DictWriter(event_file, fieldnames=fieldnames)
+            for event in self.events:
+                writer.writerow({
+                    "event": event.event,
+                    "frame": event.frame,
+                    "time_stamp": event.time_stamp,
+                    "level": event.level,
+                    "video_id": event.video_id
+                })
+            self.events = []
 
 def frame_to_timestamp(frame_number: int, fps: float = 60) -> str:
     """

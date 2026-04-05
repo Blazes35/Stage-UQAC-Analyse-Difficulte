@@ -1,7 +1,7 @@
 import cv2
 import os
 import numpy as np
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from typing import List
 
 @dataclass
@@ -78,7 +78,34 @@ def load_blinking_templates() -> List[np.ndarray]:
     
     return templates
 
-def load_other_templates() -> List[ImageTemplate]:
+@dataclass
+class CompoundTemplates:
+    templates : List[np.ndarray] = field(default_factory=list)
+    action_name : str = ""
+    cooldown : int = 60
+    threshold : float = 0.8
+    last_seen : int = -10000
+
+other_data = {
+    "fireball_throw": {
+        "cooldown": 10,
+        "threshold": 0.9
+    },
+    "goomba_stomped": {
+        "cooldown": 30,
+        "threshold": 0.7
+    },
+    "jump": {
+        "cooldown": 60,
+        "threshold": 0.8
+    },
+    "mushroom": {
+        "cooldown": 900,
+        "threshold": 0.7
+    }
+}
+
+def load_other_templates() -> List[CompoundTemplates]:
     """Load other sprite templates from resources/sprite_templates/other directory."""
     templates = []
     directory = "./ressources/sprite_templates/other"
@@ -93,6 +120,20 @@ def load_other_templates() -> List[ImageTemplate]:
             image = cv2.imread(filepath, cv2.IMREAD_GRAYSCALE)
             if image is not None:
                 name = os.path.splitext(filename)[0].replace("_", " ").replace("1", "").replace("2", "").replace("3", "")
-                templates.append(ImageTemplate(name=name, image=image))
-    
+                cooldown = other_data.get(name, {}).get("cooldown", 60)
+                threshold = other_data.get(name, {}).get("threshold", 0.8)
+                already_exists = False
+                for template in templates:
+                    if template.action_name == name:
+                        template.templates.append(image)
+                        already_exists = True
+                        break
+                if not already_exists:
+                    templates.append(CompoundTemplates(
+                        templates=[image],
+                        action_name=name,
+                        cooldown=cooldown,
+                        threshold=threshold
+                    ))
+    print(f"Loaded {len(templates)} compound templates from {directory}")
     return templates

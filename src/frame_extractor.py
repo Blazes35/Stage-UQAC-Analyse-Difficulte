@@ -32,6 +32,7 @@ def extract_all_frames(video_path : str, folder_for_frames : str = "./ressources
         i += 2
         if i % 10000 == 0:
             print("Analyzed " + str(i) + " frames...")
+            detector.write_all_events()
 
         capture.read()
         has_more_frames, frame = capture.read()

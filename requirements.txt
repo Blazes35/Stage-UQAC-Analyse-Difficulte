@@ -1,6 +1,16 @@
-# Add Python dependencies here
-numpy==2.3.3
+# Add Python dependencies herec
+numpy
 opencv-python
 matplotlib
 librosa
 scipy
+wheel
+shiny
+seaborn
+pandas
+faicons
+shinywidgets
+plotly
+ridgeplot
+palmerpenguins
+sqlite3

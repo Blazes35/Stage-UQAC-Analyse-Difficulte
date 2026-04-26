@@ -1,5 +1,6 @@
 import cv2
 import os
+import re
 import numpy as np
 from dataclasses import dataclass, field
 from typing import List
@@ -60,24 +61,6 @@ def load_mario_templates() -> List[np.ndarray]:
     
     return templates
 
-def load_blinking_templates() -> List[np.ndarray]:
-    """Load all blinking sprite templates from resources/sprite_templates/blinking directory."""
-    templates = []
-    directory = "./ressources/sprite_templates/blinking"
-    
-    if not os.path.exists(directory):
-        return templates
-    
-    for filename in os.listdir(directory):
-        filepath = os.path.join(directory, filename)
-        
-        if os.path.isfile(filepath):
-            image = cv2.imread(filepath, cv2.IMREAD_GRAYSCALE)
-            if image is not None:
-                templates.append(image)
-    
-    return templates
-
 @dataclass
 class CompoundTemplates:
     templates : List[np.ndarray] = field(default_factory=list)
@@ -87,21 +70,37 @@ class CompoundTemplates:
     last_seen : int = -10000
 
 other_data = {
-    "fireball_throw": {
-        "cooldown": 10,
+    "goomba stomped": {
+        "cooldown": 50,
         "threshold": 0.9
     },
-    "goomba_stomped": {
-        "cooldown": 30,
-        "threshold": 0.7
+    "goomba killed": {
+        "cooldown": 60,
+        "threshold": 0.9
+    },
+    "koopa killed": {
+        "cooldown": 60,
+        "threshold": 0.95
     },
     "jump": {
         "cooldown": 60,
-        "threshold": 0.8
+        "threshold": 0.85
     },
     "mushroom": {
         "cooldown": 900,
-        "threshold": 0.7
+        "threshold": 0.95
+    },
+    "fire flower": {
+        "cooldown": 900,
+        "threshold": 0.9
+    },
+    "star": {
+        "cooldown": 3000,
+        "threshold": 0.9
+    },
+    "coinblock hit": {
+        "cooldown": 40,
+        "threshold": 0.78
     }
 }
 
@@ -119,9 +118,10 @@ def load_other_templates() -> List[CompoundTemplates]:
         if os.path.isfile(filepath):
             image = cv2.imread(filepath, cv2.IMREAD_GRAYSCALE)
             if image is not None:
-                name = os.path.splitext(filename)[0].replace("_", " ").replace("1", "").replace("2", "").replace("3", "")
+                name = os.path.splitext(filename)[0]
+                name = re.sub(r"(\d+)$", "", name).replace("_", " ")
                 cooldown = other_data.get(name, {}).get("cooldown", 60)
-                threshold = other_data.get(name, {}).get("threshold", 0.8)
+                threshold = other_data.get(name, {}).get("threshold", 0.5)
                 already_exists = False
                 for template in templates:
                     if template.action_name == name:

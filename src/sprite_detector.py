@@ -1,7 +1,6 @@
 import cv2
 import numpy as np
 import csv
-from typing import cast
 import template_loader as tl
 from dataclasses import dataclass
 
@@ -48,9 +47,8 @@ class SpriteDetector:
         self.mario_dead_template = tl.load_dead_template()
         self.mario_templates = tl.load_mario_templates()
         self.level_templates = tl.load_levels_templates()
-        self.blinking_templates = tl.load_blinking_templates()
         self.other_templates = tl.load_other_templates()
-        self.current_level = "1-1"
+        self.current_level = "Game Over"
 
         with open("./data/deaths.csv", "w", newline='') as death_file:
             fieldnames = ["number", "type", "frame", "level", "video_id"]
@@ -178,17 +176,19 @@ class SpriteDetector:
         if self.last_death_frame != -1 and frame_number - self.last_death_frame < 300:
             return
         
+          
         result = cv2.matchTemplate(
             image,
             self.mario_dead_template,
-            cv2.TM_CCOEFF_NORMED
+            cv2.TM_CCOEFF_NORMED,
         )
 
         max_value = result.max()
         locations = np.where(result == max_value)
         count = locations[0].size
 
-        if count > 0 and max_value > 0.75:
+        if count > 0 and max_value > 0.8:
+            print(f"Enemy death with score {max_value:.4f}")
             self._write_death(frame_number, "enemy")
             return
             
@@ -200,17 +200,19 @@ class SpriteDetector:
             result = cv2.matchTemplate(
                 image,
                 template,
-                cv2.TM_CCOEFF_NORMED
+                cv2.TM_CCOEFF_NORMED,
             )
             if result.max() > best_score:
                 best_score = result.max()
                 y_value = np.where(result == best_score)[0][0]
                 x_value = np.where(result == best_score)[1][0]
+                if best_score > 0.95:
+                    break
 
 
         #if frame_number % 100 == 0:
         #    print(f"Best match score for Mario templates at frame {frame_number}: {best_score:.4f}, y: {y_value}")
-        if best_score > 0.8 and y_value > 205 and x_value < 150:
+        if best_score > 0.7 and y_value > 205 and x_value < 150:
             print(f"pitfall death with score {best_score:.4f}")
             self._write_death(frame_number, "pitfall")
 
@@ -301,6 +303,7 @@ class SpriteDetector:
                 if max_value < compound_template.threshold:
                     continue
 
+                print(f"Detected {compound_template.action_name} with score {max_value:.4f} with threshold {compound_template.threshold:.4f}")
                 self.events.append(Event(
                     event=compound_template.action_name,
                     frame=frame_number,
@@ -320,6 +323,8 @@ class SpriteDetector:
             fieldnames = ["event", "frame", "time_stamp", "level", "video_id"]
             writer = csv.DictWriter(event_file, fieldnames=fieldnames)
             for event in self.events:
+                if event.level == "Game Over":
+                    continue
                 writer.writerow({
                     "event": event.event,
                     "frame": event.frame,

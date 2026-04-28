@@ -50,19 +50,6 @@ class SpriteDetector:
         self.other_templates = tl.load_other_templates()
         self.current_level = "Game Over"
 
-        with open("./data/deaths.csv", "w", newline='') as death_file:
-            fieldnames = ["number", "type", "frame", "level", "video_id"]
-            writer = csv.DictWriter(death_file, fieldnames=fieldnames)
-            writer.writeheader()
-        with open("./data/levels.csv", "w", newline='') as level_file:
-            fieldnames = ["frame", "level", "video_id"]
-            writer = csv.DictWriter(level_file, fieldnames=fieldnames)
-            writer.writeheader()
-        with open("./data/events.csv", "w", newline='') as event_file:
-            fieldnames = ["event", "frame", "time_stamp", "level", "video_id"]
-            writer = csv.DictWriter(event_file, fieldnames=fieldnames)
-            writer.writeheader()
-
     def analyze(self, image: np.ndarray, frame_number: int):
         """
         Analyzes a single video frame.
@@ -82,10 +69,14 @@ class SpriteDetector:
 
         cropped = image[self.top:self.bottom, self.left:self.right]
         normalized = self._normalize(cropped)
-        self._detect(normalized, frame_number)
-        self.detect_other_sprites(normalized, frame_number)
         if normalized.mean() < 20:
             self._detect_level(normalized, frame_number)
+
+        if self.current_level == "Game Over":
+            return
+
+        self._detect(normalized, frame_number)
+        self.detect_other_sprites(normalized, frame_number)
 
     def _find_game_area_projection(self, image: np.ndarray, frame_number: int):
         """
@@ -303,7 +294,7 @@ class SpriteDetector:
                 if max_value < compound_template.threshold:
                     continue
 
-                print(f"Detected {compound_template.action_name} with score {max_value:.4f} with threshold {compound_template.threshold:.4f}")
+                print(f"Detected {compound_template.action_name} with score {max_value:.4f}")
                 self.events.append(Event(
                     event=compound_template.action_name,
                     frame=frame_number,

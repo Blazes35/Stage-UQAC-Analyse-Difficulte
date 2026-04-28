@@ -70,10 +70,6 @@ class CompoundTemplates:
     last_seen : int = -10000
 
 other_data = {
-    "goomba stomped": {
-        "cooldown": 50,
-        "threshold": 0.9
-    },
     "goomba killed": {
         "cooldown": 60,
         "threshold": 0.9
@@ -100,7 +96,7 @@ other_data = {
     },
     "coinblock hit": {
         "cooldown": 40,
-        "threshold": 0.78
+        "threshold": 0.775
     }
 }
 

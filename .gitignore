@@ -6,5 +6,6 @@ src/*pycache*
 /ressources/videos/**
 /ressources/sound_matches/**
 /ressources/sounds/**
+*.zip
 
 !.gitkeep

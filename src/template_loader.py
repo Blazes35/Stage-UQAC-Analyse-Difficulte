@@ -96,7 +96,7 @@ other_data = {
     },
     "coinblock hit": {
         "cooldown": 40,
-        "threshold": 0.775
+        "threshold": 0.79
     }
 }
 

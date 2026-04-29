@@ -6,7 +6,7 @@ from pathlib import Path
 app_dir = Path(__file__).parent
 
 # Define the path to your SQLite database
-db_path = app_dir / "Database.sqlite"
+db_path = app_dir.parent / "database" / "Database.sqlite"
 
 
 def load_level_data():
@@ -16,7 +16,7 @@ def load_level_data():
 
         # Using CTEs to pre-group 1-to-many relationships to prevent duplicates
         query = """
-                WITH Enemy_Data AS (SELECT Level_ID, \
+                WITH Enemy_Data AS (SELECT Level_ID , \
                                            GROUP_CONCAT(ET.Name || ' (' || LE.Count || ')', ', ') AS Enemy_List \
                                     FROM Level_Enemies LE \
                                              JOIN Enemy_Types ET ON LE.Enemy_ID = ET.Enemy_ID \
@@ -37,7 +37,7 @@ def load_level_data():
                                           GROUP_CONCAT('Size ' || Size || ' (' || Number || ')', ', ') AS Hole_List \
                                    FROM Holes \
                                    GROUP BY Level_ID)
-                SELECT L.Level_ID, \
+                SELECT L.Level_ID AS Level, \
                        L.Theme, \
                        L.Coins, \
                        L.Hidden_Boxes, \
@@ -85,6 +85,62 @@ def load_level_data():
         print(f"Database error: {e}")
         return pd.DataFrame(columns=['Level_ID', 'Theme', 'Error'])
 
+
+def load_video_logs():
+    """Crée un log chronologique : 1 ligne = 1 événement/mort/niveau pour une vidéo."""
+    try:
+        conn = sqlite3.connect(db_path)
+
+        query = """
+                SELECT v.name      AS Video, \
+                       'Evenement' AS Type, \
+                       e.event     AS Detail, \
+                       e.level     AS Niveau, \
+                       e.frame     AS Frame
+                FROM Events e
+                         JOIN Videos v ON e.video_id = v.id
+
+                UNION ALL
+
+                SELECT v.name  AS Video, \
+                       'Mort'  AS Type, \
+                       d.type  AS Detail, \
+                       d.level AS Niveau, \
+                       d.frame AS Frame
+                FROM Deaths d
+                         JOIN Videos v ON d.video_id = v.id
+
+                UNION ALL
+
+                SELECT v.name                     AS Video, \
+                       'Changement Niveau'        AS Type, \
+                       'Entrée dans ' || vl.level AS Detail, \
+                       vl.level                   AS Niveau, \
+                       vl.frame                   AS Frame
+                FROM Video_Levels vl
+                         JOIN Videos v ON vl.video_id = v.id
+
+                ORDER BY Video, Frame ASC; \
+                """
+
+        df = pd.read_sql_query(query, conn)
+        conn.close()
+
+        # Nettoyage pour le rendu (espaces insécables et tirets)
+        # On protège les noms comme "1-Up" ou "1-1"
+        for col in ['Detail', 'Niveau']:
+            if col in df.columns:
+                df[col] = df[col].astype(str).str.replace(' ', '\xa0').str.replace('-', '\u2011')
+
+        return df
+    except sqlite3.Error as e:
+        print(f"Erreur DB : {e}")
+        return pd.DataFrame()
+
+
+# Chargement pour l'application
+df_levels = load_level_data()
+df_logs = load_video_logs()
 
 # Load the dataframe to be shared with app.py
 df = load_level_data()

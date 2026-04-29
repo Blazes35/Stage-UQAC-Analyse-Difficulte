@@ -1,4 +1,5 @@
 import sqlite3
+from import_csv import import_csv_to_sql
 
 
 def insert_hardcoded_data(db_filename='Database.sqlite'):
@@ -17,9 +18,9 @@ def insert_hardcoded_data(db_filename='Database.sqlite'):
             ('1-3', 'overworld', 23, 0, 0, 1, 164, 2624),
             ('1-4', 'castle', 0, 6, 0, 1, 160, 2560),
             # --- ADD THESE PLACEHOLDERS ---
-            ('2-1', 'placeholder for next levels', 0, 0, 0, 0, 0, 0),
-            ('3-1', 'placeholder for next levels', 0, 0, 0, 0, 0, 0),
-            ('4-1', 'placeholder for next levels', 0, 0, 0, 0, 0, 0)
+            ('2-1', 'needed for next levels', 0, 0, 0, 0, 0, 0),
+            ('3-1', 'needed for next levels', 0, 0, 0, 0, 0, 0),
+            ('4-1', 'needed for next levels', 0, 0, 0, 0, 0, 0)
         ]
         cursor.executemany('''
                            INSERT INTO Levels
@@ -92,15 +93,38 @@ def insert_hardcoded_data(db_filename='Database.sqlite'):
         ]
         cursor.executemany('INSERT INTO Next_Levels VALUES (?, ?)', next_levels)
 
-
         # Commit all the changes
         conn.commit()
         print("\nSuccess! All known values have been inserted into the database.")
 
+        # ==========================================
+        # EXÉCUTION DES IMPORTS AVEC MAPPING
+        # ==========================================
+        # Format du mapping : {'colonne_dans_le_csv': 'colonne_dans_sql'}
+
+        import_csv_to_sql(conn, 'csv/videos.csv', 'Videos',
+                          {'id': 'id', 'name': 'name'}
+                          )
+
+        import_csv_to_sql(conn, 'csv/events.csv', 'Events',
+                          {'event': 'event', 'frame': 'frame', 'level': 'level', 'video_id': 'video_id'}
+                          )
+
+        import_csv_to_sql(conn, 'csv/deaths.csv', 'Deaths',
+                          {'type': 'type', 'frame': 'frame', 'level': 'level', 'video_id': 'video_id'}
+                          )
+
+        import_csv_to_sql(conn, 'csv/levels.csv', 'Video_Levels',
+                          {'frame': 'frame', 'level': 'level', 'video_id': 'video_id'}
+                          )
+
+        # Commit all the changes
+        conn.commit()
+        print("\nMise à jour de la base de données terminée !")
+
     except sqlite3.IntegrityError as e:
         print(f"\nDatabase Constraint Error: {e}")
-        print(
-            "Note: If you already ran this script once, the data is already there and Primary Keys prevent duplicates.")
+        print("Note: If you already ran this script once, the data is already there and Primary Keys prevent duplicates.")
     except Exception as e:
         print(f"\nAn error occurred: {e}")
         conn.rollback()

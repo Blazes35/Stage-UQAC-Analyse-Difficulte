@@ -119,12 +119,69 @@ def create_database(db_filename='Database.sqlite'):
                    );
                    ''')
 
-    # Commit changes and close the connection
-    conn.commit()
-    conn.close()
-
     print("Database schema created successfully!")
 
+    print(f"Création des tables de tracking dans '{db_filename}'...")
+
+    # ==========================================
+    # 1. VIDEOS TABLE (Ajout de framerate)
+    # ==========================================
+    cursor.execute('''
+                   CREATE TABLE IF NOT EXISTS Videos
+                   (
+                       id INTEGER PRIMARY KEY,
+                       name TEXT,
+                       framerate INTEGER DEFAULT60
+                   );
+                   ''')
+
+    # ==========================================
+    # 2. EVENTS TABLE (Sans timestamp)
+    # ==========================================
+    cursor.execute('''
+                   CREATE TABLE IF NOT EXISTS Events
+                   (
+                       event TEXT,
+                       frame INTEGER,
+                       level TEXT,
+                       video_id INTEGER,
+                       FOREIGN KEY (video_id) REFERENCES Videos (id),
+                       FOREIGN KEY (level) REFERENCES Levels (Level_ID)
+                   );
+                   ''')
+
+    # ==========================================
+    # 3. DEATHS TABLE (Sans number)
+    # ==========================================
+    cursor.execute('''
+                   CREATE TABLE IF NOT EXISTS Deaths
+                   (
+                       type TEXT,
+                       frame INTEGER,
+                       level TEXT,
+                       video_id INTEGER,
+                       FOREIGN KEY (video_id) REFERENCES Videos (id),
+                       FOREIGN KEY (level) REFERENCES Levels (Level_ID)
+                   );
+                   ''')
+
+    # ==========================================
+    # 4. VIDEO LEVELS TABLE
+    # ==========================================
+    cursor.execute('''
+                   CREATE TABLE IF NOT EXISTS Video_Levels
+                   (
+                       frame INTEGER,
+                       level TEXT,
+                       video_id INTEGER,
+                       FOREIGN KEY (video_id) REFERENCES Videos (id),
+                       FOREIGN KEY (level) REFERENCES Levels (Level_ID)
+                   );
+                   ''')
+
+    conn.commit()
+    conn.close()
+    print("Tables créées \n")
 
 # Run the function
 if __name__ == "__main__":

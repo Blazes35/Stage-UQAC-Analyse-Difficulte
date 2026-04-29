@@ -14,9 +14,9 @@ Les résultats de cette analyse sont ensuite stockés dans [data](./data/) sous 
 
 ## [Application de visualisation des données](./shiny/)
 
-Le résultat des analyses peut-être observé dans une application web shiny développée en Python.
+Le résultat des analyses peut être observé dans une application web shiny développée en Python.
 
-//TODO à compléter
+Voir le [Shiny README](./shiny/README.md)
 
 ## Crédits
 

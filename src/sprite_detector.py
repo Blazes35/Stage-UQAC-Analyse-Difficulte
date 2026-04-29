@@ -18,13 +18,13 @@ class SpriteDetector:
 
     The detector first identifies the projected game area inside the full frame.
     Once the projection is found, subsequent frames are cropped, normalized to
-    the original NES resolution (256x224), and analyzed for sprite presence.
+    the original game resolution (256x234), and analyzed for sprite presence.
     """
 
     NORMALIZED_WIDTH = 256
-    NORMALIZED_HEIGHT = 224
-    MATCH_THRESHOLD = 0.5
-    PROJECTION_THRESHOLD = 50
+    NORMALIZED_HEIGHT = 234
+    MENU_MATCH_THRESHOLD = 0.5 # Degré de similarité minimum pour détecter le menu principal
+    PROJECTION_THRESHOLD = 50 # Seuil de luminosité pour détecter les bords de la projection du jeu
 
     def __init__(self, video_id: int):
         """
@@ -56,7 +56,7 @@ class SpriteDetector:
 
         If the game projection area has not yet been identified, the method
         attempts to detect it. Once detected, frames are cropped to the
-        projection bounds, normalized to 256x224 grayscale, and scanned
+        projection bounds, normalized to 256x234 grayscale, and scanned
         for sprite matches.
 
         Args:
@@ -75,8 +75,8 @@ class SpriteDetector:
         if self.current_level == "Game Over":
             return
 
-        self._detect(normalized, frame_number)
-        self.detect_other_sprites(normalized, frame_number)
+        self._detect_death(normalized, frame_number)
+        self._detect_other_sprites(normalized, frame_number)
 
     def _find_game_area_projection(self, image: np.ndarray, frame_number: int):
         """
@@ -103,12 +103,6 @@ class SpriteDetector:
 
         if cols.size == 0 or rows.size == 0:
             return
-        #else:
-            #print(
-            #    f"Found non-black area at frame {frame_number} "
-            #    f"with bounds x: [{cols[0]}, {cols[-1]}], "
-            #    f"y: [{rows[0]}, {rows[-1]}]"
-            #)
 
         cropped = gray[rows[0]:rows[-1], cols[0]:cols[-1]]
         resized = cv2.resize(
@@ -123,11 +117,11 @@ class SpriteDetector:
         )
 
         max_value = result.max()
-        if max_value < self.MATCH_THRESHOLD:
+        if max_value < self.MENU_MATCH_THRESHOLD:
             return
 
         print(
-            f"Found title screen at timestamp {frame_to_timestamp(frame_number)} "
+            f"Found title screen at timestamp {_frame_to_timestamp(frame_number)} "
             f"with accuracy = {max_value:.4f}"
         )
 
@@ -138,13 +132,13 @@ class SpriteDetector:
     def _normalize(self, image: np.ndarray) -> np.ndarray:
         """
         Converts an image to grayscale and rescales it to the original
-        Super Mario Bros resolution (256x224).
+        Super Mario Bros resolution (256x234).
 
         Args:
             image (np.ndarray): Cropped RGB/BGR game area.
 
         Returns:
-            np.ndarray: Grayscale image resized to 256x224.
+            np.ndarray: Grayscale image resized to 256x234.
         """
         gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         return cv2.resize(
@@ -152,16 +146,13 @@ class SpriteDetector:
             (self.NORMALIZED_WIDTH, self.NORMALIZED_HEIGHT)
         )
 
-    def _detect(self, image, frame_number: int):
+    def _detect_death(self, image, frame_number: int):
         """
-        Detects sprites in a normalized grayscale frame using
-        template matching.
-
-        All matches above MATCH_THRESHOLD are reported with their
-        coordinates and correlation score.
+        Detects mario death within a frame by first looking for the dead sprite, then checking for a
+        pitfall death by tracking the position of Mario's head.
 
         Args:
-            image (np.ndarray): Grayscale image (256x224).
+            image (np.ndarray): Grayscale image (256x234).
             frame_number (int): Index of the current frame.
         """
         if self.last_death_frame != -1 and frame_number - self.last_death_frame < 300:
@@ -200,9 +191,6 @@ class SpriteDetector:
                 if best_score > 0.95:
                     break
 
-
-        #if frame_number % 100 == 0:
-        #    print(f"Best match score for Mario templates at frame {frame_number}: {best_score:.4f}, y: {y_value}")
         if best_score > 0.7 and y_value > 205 and x_value < 150:
             print(f"pitfall death with score {best_score:.4f}")
             self._write_death(frame_number, "pitfall")
@@ -228,18 +216,18 @@ class SpriteDetector:
                 "level": self.current_level,
                 "video_id": self.video_id
             })
-        print(f"Death detected at time {frame_to_timestamp(frame_number)}, type: {death_type}, total deaths: {self.death_count}")
+        print(f"Death detected at time {_frame_to_timestamp(frame_number)}, type: {death_type}, total deaths: {self.death_count}")
         
     def _detect_level(self, image, frame_number: int):
         """
         Detects the current level in a normalized grayscale frame using
         template matching.
 
-        All matches above MATCH_THRESHOLD are reported with their
-        coordinates and correlation score.
+        If a match above the threshold is found and the detected level differs
+        from the current level, the new level is recorded in the levels CSV file.
 
         Args:
-            image (np.ndarray): Grayscale image (256x224).
+            image (np.ndarray): Grayscale image (256x234).
             frame_number (int): Index of the current frame.
         """
         for template in self.level_templates:
@@ -263,19 +251,19 @@ class SpriteDetector:
                         "level": self.current_level,
                         "video_id": self.video_id
                     })
-                print(f"Level changed to {self.current_level} at timestamp {frame_to_timestamp(frame_number)}")
+                print(f"Level changed to {self.current_level} at timestamp {_frame_to_timestamp(frame_number)}")
             break
 
-    def detect_other_sprites(self, image, frame_number: int):
+    def _detect_other_sprites(self, image, frame_number: int):
         """
         Detects other sprites in a normalized grayscale frame using
         template matching.
 
-        All matches above MATCH_THRESHOLD are reported with their
-        coordinates and correlation score.
+        All matches above their respective thresholds are added to the events list, which is periodically
+        flushed to the CSV file to minimize I/O overhead.
 
         Args:
-            image (np.ndarray): Grayscale image (256x224).
+            image (np.ndarray): Grayscale image (256x234).
             frame_number (int): Index of the current frame.
         """
         for compound_template in self.other_templates:
@@ -298,16 +286,18 @@ class SpriteDetector:
                 self.events.append(Event(
                     event=compound_template.action_name,
                     frame=frame_number,
-                    time_stamp=frame_to_timestamp(frame_number),
+                    time_stamp=_frame_to_timestamp(frame_number),
                     level=self.current_level,
                     video_id=self.video_id
                 ))
                 compound_template.last_seen = frame_number
                 break
 
-    def write_all_events(self):
+    def _write_all_events(self):
         """
         Writes all detected events to the CSV file.
+
+        Should be called periodically (e.g., every 1000 frames) to flush accumulated events
         """
         print(f"Writing {len(self.events)} events to CSV file...")
         with open("./data/events.csv", "a", newline='') as event_file:
@@ -325,7 +315,7 @@ class SpriteDetector:
                 })
             self.events = []
 
-def frame_to_timestamp(frame_number: int, fps: float = 60) -> str:
+def _frame_to_timestamp(frame_number: int, fps: float = 60) -> str:
     """
     Converts a frame number to a timestamp string in the format "MM:SS".
 

@@ -30,11 +30,10 @@ def extract_all_frames(video_path : str, video_id : int = 1, folder_for_frames :
 
     while(capture.isOpened):
         i += 1
-        if i % 600 == 0:
+        if i % 1000 == 0:
             print("Analyzed " + str(i) + " frames...")
-            detector.write_all_events()
+            detector._write_all_events()
 
-        #capture.read()
         has_more_frames, frame = capture.read()
         if has_more_frames == False:
             break
@@ -44,6 +43,7 @@ def extract_all_frames(video_path : str, video_id : int = 1, folder_for_frames :
         if save_frames:
             frame_name = folder_for_frames + "/frame"+str(i)+".jpg"
             cv2.imwrite(frame_name, frame)
+    detector._write_all_events()
     print ("Total of frames extracted : " + str(i-1))
 
 def delete_all_files_in_folder(folder : str):

@@ -18,6 +18,10 @@ Le résultat des analyses peut être observé dans une application web shiny dé
 
 Voir le [Shiny README](./shiny/README.md)
 
+## Prérequis
+
+* Python3
+
 ## Crédits
 
 Les sprites utilisés pour les templates sont tirés de Super Mario Bros sur NES, et obtenus via *[The Spriters Resource](https://www.spriters-resource.com/nes/supermariobros/)*

@@ -1,0 +1,2298 @@
+event,frame,level,video_id
+jump,651,1-1,1
+jump,808,1-1,1
+jump,1153,1-1,1
+goomba killed,1189,1-1,1
+jump,1235,1-1,1
+coinblock hit,1245,1-1,1
+jump,1317,1-1,1
+mushroom,1385,1-1,1
+jump,1609,1-1,1
+coinblock hit,1620,1-1,1
+jump,1683,1-1,1
+jump,1743,1-1,1
+jump,1822,1-1,1
+coinblock hit,1831,1-1,1
+jump,1882,1-1,1
+jump,1983,1-1,1
+jump,2043,1-1,1
+goomba killed,2094,1-1,1
+jump,2103,1-1,1
+goomba killed,2200,1-1,1
+jump,2270,1-1,1
+jump,2563,1-1,1
+star,2614,1-1,1
+jump,2666,1-1,1
+goomba killed,2675,1-1,1
+jump,2726,1-1,1
+goomba killed,2735,1-1,1
+fire flower,2753,1-1,1
+jump,2801,1-1,1
+jump,3189,1-1,1
+jump,3259,1-1,1
+goomba killed,3331,1-1,1
+jump,3352,1-1,1
+jump,3412,1-1,1
+jump,3482,1-1,1
+coinblock hit,3522,1-1,1
+jump,3542,1-1,1
+koopa killed,3561,1-1,1
+jump,3610,1-1,1
+coinblock hit,3617,1-1,1
+goomba killed,3624,1-1,1
+coinblock hit,3657,1-1,1
+jump,3679,1-1,1
+coinblock hit,3731,1-1,1
+jump,3739,1-1,1
+jump,3799,1-1,1
+fire flower,3858,1-1,1
+jump,3888,1-1,1
+jump,3948,1-1,1
+goomba killed,4128,1-1,1
+jump,4133,1-1,1
+goomba killed,4235,1-1,1
+jump,4288,1-1,1
+coinblock hit,4337,1-1,1
+jump,4370,1-1,1
+coinblock hit,4377,1-1,1
+goomba killed,4426,1-1,1
+jump,4430,1-1,1
+jump,4490,1-1,1
+jump,4550,1-1,1
+jump,4625,1-1,1
+jump,4685,1-1,1
+jump,4745,1-1,1
+jump,4816,1-1,1
+jump,4895,1-1,1
+goomba killed,4895,1-1,1
+coinblock hit,4904,1-1,1
+jump,4955,1-1,1
+jump,5015,1-1,1
+jump,5087,1-1,1
+jump,5147,1-1,1
+jump,5207,1-1,1
+jump,5291,1-1,1
+jump,5359,1-1,1
+goomba killed,6588,1-2,1
+jump,6603,1-2,1
+coinblock hit,6606,1-2,1
+jump,6663,1-2,1
+fire flower,6696,1-2,1
+coinblock hit,6712,1-2,1
+jump,6723,1-2,1
+coinblock hit,6759,1-2,1
+jump,6792,1-2,1
+coinblock hit,6799,1-2,1
+jump,6872,1-2,1
+jump,6932,1-2,1
+jump,7064,1-2,1
+jump,7124,1-2,1
+koopa killed,7156,1-2,1
+jump,7188,1-2,1
+goomba killed,7237,1-2,1
+jump,7268,1-2,1
+jump,7332,1-2,1
+koopa killed,7368,1-2,1
+coinblock hit,7383,1-2,1
+jump,7431,1-2,1
+coinblock hit,7441,1-2,1
+goomba killed,7515,1-2,1
+koopa killed,7530,1-2,1
+jump,7542,1-2,1
+jump,7602,1-2,1
+koopa killed,7622,1-2,1
+jump,7662,1-2,1
+jump,7739,1-2,1
+coinblock hit,7747,1-2,1
+koopa killed,7753,1-2,1
+coinblock hit,7787,1-2,1
+jump,7799,1-2,1
+jump,7901,1-2,1
+coinblock hit,7911,1-2,1
+goomba killed,7945,1-2,1
+jump,7990,1-2,1
+koopa killed,8051,1-2,1
+jump,8056,1-2,1
+goomba killed,8141,1-2,1
+jump,8152,1-2,1
+jump,8229,1-2,1
+jump,8289,1-2,1
+goomba killed,8341,1-2,1
+jump,8448,1-2,1
+jump,8518,1-2,1
+jump,8578,1-2,1
+jump,8639,1-2,1
+jump,8699,1-2,1
+jump,8761,1-2,1
+jump,8871,1-2,1
+jump,8937,1-2,1
+jump,9199,1-2,1
+jump,9264,1-2,1
+jump,9324,1-2,1
+jump,9408,1-2,1
+jump,10398,1-3,1
+jump,10458,1-3,1
+jump,11091,1-3,1
+jump,11162,1-3,1
+jump,11328,1-3,1
+star,11333,1-3,1
+jump,11907,1-3,1
+jump,12158,1-3,1
+jump,12327,1-3,1
+jump,12409,1-3,1
+jump,12627,1-3,1
+jump,12687,1-3,1
+jump,12759,1-3,1
+jump,12819,1-3,1
+jump,12879,1-3,1
+jump,12979,1-3,1
+jump,13062,1-3,1
+mushroom,13067,1-3,1
+jump,13200,1-3,1
+jump,13260,1-3,1
+jump,13321,1-3,1
+jump,14723,1-3,1
+goomba killed,14766,1-3,1
+jump,14783,1-3,1
+jump,14843,1-3,1
+jump,14936,1-3,1
+jump,1073,1-1,2
+coinblock hit,1082,1-1,2
+jump,1133,1-1,2
+jump,1204,1-1,2
+goomba killed,1242,1-1,2
+jump,1308,1-1,2
+jump,1368,1-1,2
+mushroom,1383,1-1,2
+jump,1428,1-1,2
+jump,1526,1-1,2
+jump,1602,1-1,2
+jump,1662,1-1,2
+jump,1722,1-1,2
+coinblock hit,1723,1-1,2
+jump,1792,1-1,2
+jump,1920,1-1,2
+jump,2004,1-1,2
+goomba killed,2034,1-1,2
+jump,2071,1-1,2
+jump,2131,1-1,2
+goomba killed,2169,1-1,2
+jump,2205,1-1,2
+jump,2505,1-1,2
+jump,2619,1-1,2
+fire flower,2661,1-1,2
+jump,2696,1-1,2
+jump,3122,1-1,2
+goomba killed,3214,1-1,2
+koopa killed,3379,1-1,2
+jump,3462,1-1,2
+coinblock hit,3470,1-1,2
+jump,3548,1-1,2
+goomba killed,3624,1-1,2
+jump,3682,1-1,2
+jump,3756,1-1,2
+jump,3816,1-1,2
+jump,3889,1-1,2
+jump,3952,1-1,2
+jump,4012,1-1,2
+jump,4072,1-1,2
+fire flower,4099,1-1,2
+jump,4150,1-1,2
+coinblock hit,4182,1-1,2
+jump,4214,1-1,2
+goomba killed,4318,1-1,2
+goomba killed,4427,1-1,2
+goomba killed,4487,1-1,2
+jump,4533,1-1,2
+jump,4593,1-1,2
+jump,4661,1-1,2
+jump,4723,1-1,2
+jump,4809,1-1,2
+jump,4935,1-1,2
+jump,4995,1-1,2
+jump,5081,1-1,2
+jump,5165,1-1,2
+jump,5225,1-1,2
+jump,5303,1-1,2
+jump,5497,1-1,2
+jump,5557,1-1,2
+jump,5731,1-1,2
+jump,6360,1-2,2
+goomba killed,6811,1-2,2
+goomba killed,6871,1-2,2
+jump,6903,1-2,2
+fire flower,6949,1-2,2
+jump,6963,1-2,2
+coinblock hit,6966,1-2,2
+jump,7042,1-2,2
+jump,7132,1-2,2
+jump,7241,1-2,2
+jump,7301,1-2,2
+jump,7362,1-2,2
+jump,7459,1-2,2
+jump,7548,1-2,2
+jump,7876,1-2,2
+coinblock hit,7886,1-2,2
+jump,7949,1-2,2
+jump,8010,1-2,2
+jump,8083,1-2,2
+jump,8147,1-2,2
+jump,8237,1-2,2
+goomba killed,8395,1-2,2
+jump,8500,1-2,2
+coinblock hit,8510,1-2,2
+coinblock hit,8558,1-2,2
+jump,8560,1-2,2
+coinblock hit,8598,1-2,2
+jump,8620,1-2,2
+coinblock hit,8645,1-2,2
+jump,8680,1-2,2
+coinblock hit,8692,1-2,2
+coinblock hit,8732,1-2,2
+jump,8740,1-2,2
+jump,8822,1-2,2
+koopa killed,8950,1-2,2
+jump,9024,1-2,2
+coinblock hit,9029,1-2,2
+koopa killed,9031,1-2,2
+jump,9084,1-2,2
+jump,9154,1-2,2
+coinblock hit,9154,1-2,2
+jump,9214,1-2,2
+koopa killed,9385,1-2,2
+goomba killed,9408,1-2,2
+goomba killed,9545,1-2,2
+jump,9908,1-2,2
+jump,9985,1-2,2
+jump,10092,1-2,2
+jump,10200,1-2,2
+coinblock hit,10228,1-2,2
+jump,10260,1-2,2
+goomba killed,10354,1-2,2
+goomba killed,10414,1-2,2
+jump,10564,1-2,2
+jump,10624,1-2,2
+jump,10754,1-2,2
+goomba killed,10955,1-2,2
+goomba killed,11017,1-2,2
+jump,11101,1-2,2
+jump,11161,1-2,2
+jump,11221,1-2,2
+jump,11281,1-2,2
+jump,11345,1-2,2
+jump,11463,1-2,2
+jump,11527,1-2,2
+jump,11587,1-2,2
+jump,11647,1-2,2
+jump,11769,1-2,2
+jump,11836,1-2,2
+jump,11896,1-2,2
+jump,11985,1-2,2
+jump,12046,1-2,2
+goomba killed,12182,1-2,2
+jump,12186,1-2,2
+jump,12387,1-2,2
+jump,12536,1-2,2
+jump,12596,1-2,2
+jump,12754,1-2,2
+goomba killed,12761,1-2,2
+jump,12814,1-2,2
+jump,12937,1-2,2
+jump,12997,1-2,2
+jump,13108,1-2,2
+jump,13170,1-2,2
+jump,13834,1-2,2
+jump,13895,1-2,2
+jump,14576,1-2,2
+jump,14636,1-2,2
+goomba killed,14684,1-2,2
+jump,14915,1-2,2
+jump,15010,1-2,2
+jump,15080,1-2,2
+jump,15165,1-2,2
+jump,16647,1-2,2
+goomba killed,16688,1-2,2
+jump,16754,1-2,2
+jump,16864,1-2,2
+jump,17143,1-1,2
+jump,17398,1-1,2
+jump,17530,1-1,2
+jump,17590,1-1,2
+coinblock hit,17601,1-1,2
+jump,17697,1-1,2
+mushroom,17759,1-1,2
+jump,17768,1-1,2
+jump,17831,1-1,2
+jump,17987,1-1,2
+jump,18101,1-1,2
+jump,18181,1-1,2
+jump,18241,1-1,2
+jump,18315,1-1,2
+jump,18485,1-1,2
+jump,18601,1-1,2
+fire flower,18643,1-1,2
+jump,18672,1-1,2
+jump,18795,1-1,2
+jump,18856,1-1,2
+goomba killed,18896,1-1,2
+jump,18999,1-1,2
+jump,19059,1-1,2
+coinblock hit,19070,1-1,2
+jump,19272,1-1,2
+goomba killed,19321,1-1,2
+jump,19332,1-1,2
+jump,19403,1-1,2
+coinblock hit,19415,1-1,2
+jump,19502,1-1,2
+jump,19562,1-1,2
+jump,19626,1-1,2
+jump,19694,1-1,2
+jump,19754,1-1,2
+jump,19814,1-1,2
+jump,19915,1-1,2
+jump,19975,1-1,2
+jump,20049,1-1,2
+jump,20152,1-1,2
+jump,20212,1-1,2
+jump,20278,1-1,2
+jump,20340,1-1,2
+jump,20404,1-1,2
+jump,20467,1-1,2
+jump,20527,1-1,2
+jump,20588,1-1,2
+jump,22034,1-2,2
+jump,22101,1-2,2
+jump,22252,1-2,2
+jump,22314,1-2,2
+jump,22374,1-2,2
+jump,22439,1-2,2
+jump,22504,1-2,2
+jump,22564,1-2,2
+jump,22641,1-2,2
+jump,23446,1-2,2
+jump,23506,1-2,2
+coinblock hit,23539,1-2,2
+jump,23566,1-2,2
+jump,23630,1-2,2
+jump,23692,1-2,2
+jump,23753,1-2,2
+jump,23820,1-2,2
+jump,24026,1-2,2
+jump,24415,1-2,2
+jump,24518,1-2,2
+jump,24578,1-2,2
+goomba killed,24605,1-2,2
+jump,24800,1-2,2
+goomba killed,24826,1-2,2
+jump,25090,1-2,2
+goomba killed,25107,1-2,2
+jump,25200,1-2,2
+goomba killed,25221,1-2,2
+coinblock hit,25227,1-2,2
+jump,25328,1-2,2
+jump,25502,1-2,2
+jump,25596,1-2,2
+jump,25656,1-2,2
+jump,25716,1-2,2
+jump,25809,1-2,2
+jump,25869,1-2,2
+jump,26027,1-2,2
+goomba killed,26033,1-2,2
+jump,26087,1-2,2
+jump,26250,1-2,2
+jump,26310,1-2,2
+jump,26385,1-2,2
+jump,26449,1-2,2
+jump,26780,1-2,2
+jump,26840,1-2,2
+jump,26900,1-2,2
+jump,26960,1-2,2
+jump,27998,1-3,2
+jump,28059,1-3,2
+jump,28176,1-3,2
+jump,28380,1-3,2
+jump,28453,1-3,2
+goomba killed,28497,1-3,2
+jump,28580,1-3,2
+jump,28652,1-3,2
+coinblock hit,28666,1-3,2
+jump,28712,1-3,2
+jump,28774,1-3,2
+jump,29019,1-3,2
+jump,29156,1-3,2
+mushroom,29248,1-3,2
+jump,29378,1-3,2
+jump,29438,1-3,2
+jump,29501,1-3,2
+goomba killed,29543,1-3,2
+jump,29595,1-3,2
+jump,30214,1-3,2
+jump,30310,1-3,2
+jump,30370,1-3,2
+jump,30455,1-3,2
+jump,30628,1-3,2
+jump,30706,1-3,2
+jump,30773,1-3,2
+jump,30833,1-3,2
+jump,30893,1-3,2
+jump,30965,1-3,2
+jump,31034,1-3,2
+jump,31267,1-3,2
+jump,31353,1-3,2
+jump,31413,1-3,2
+jump,31473,1-3,2
+jump,31533,1-3,2
+jump,32488,1-4,2
+jump,32621,1-4,2
+jump,32700,1-4,2
+jump,32760,1-4,2
+koopa killed,32849,1-4,2
+jump,33355,1-4,2
+jump,33439,1-4,2
+jump,33502,1-4,2
+jump,33573,1-4,2
+jump,754,1-1,3
+jump,820,1-1,3
+jump,907,1-1,3
+jump,1086,1-1,3
+jump,1545,1-1,3
+jump,1607,1-1,3
+jump,1704,1-1,3
+goomba killed,1766,1-1,3
+jump,1848,1-1,3
+jump,1909,1-1,3
+jump,1972,1-1,3
+jump,2073,1-1,3
+coinblock hit,2079,1-1,3
+jump,2150,1-1,3
+mushroom,2218,1-1,3
+jump,2227,1-1,3
+coinblock hit,2242,1-1,3
+jump,2406,1-1,3
+jump,2498,1-1,3
+jump,2558,1-1,3
+coinblock hit,2560,1-1,3
+jump,2618,1-1,3
+jump,2778,1-1,3
+jump,2838,1-1,3
+goomba killed,2883,1-1,3
+jump,2898,1-1,3
+jump,2958,1-1,3
+goomba killed,3000,1-1,3
+jump,3088,1-1,3
+goomba killed,3120,1-1,3
+jump,3214,1-1,3
+jump,3393,1-1,3
+jump,3490,1-1,3
+goomba killed,3498,1-1,3
+jump,3550,1-1,3
+goomba killed,3558,1-1,3
+jump,3618,1-1,3
+goomba killed,3618,1-1,3
+jump,3678,1-1,3
+mushroom,3726,1-1,3
+jump,4002,1-1,3
+jump,4070,1-1,3
+goomba killed,4135,1-1,3
+jump,4196,1-1,3
+jump,4354,1-1,3
+coinblock hit,4364,1-1,3
+jump,4414,1-1,3
+jump,4474,1-1,3
+goomba killed,4507,1-1,3
+jump,4534,1-1,3
+coinblock hit,4565,1-1,3
+jump,4622,1-1,3
+coinblock hit,4633,1-1,3
+jump,4682,1-1,3
+jump,4788,1-1,3
+fire flower,4873,1-1,3
+jump,4898,1-1,3
+jump,4991,1-1,3
+jump,5051,1-1,3
+jump,5111,1-1,3
+jump,5172,1-1,3
+jump,5232,1-1,3
+jump,5301,1-1,3
+jump,5361,1-1,3
+jump,5478,1-1,3
+jump,5538,1-1,3
+jump,5598,1-1,3
+fire flower,5773,1-1,3
+jump,5830,1-1,3
+jump,5890,1-1,3
+jump,5950,1-1,3
+jump,6010,1-1,3
+jump,6106,1-1,3
+jump,6344,1-1,3
+jump,6610,1-1,3
+goomba killed,6661,1-1,3
+jump,6670,1-1,3
+jump,6811,1-1,3
+goomba killed,6913,1-1,3
+jump,7049,1-1,3
+jump,7109,1-1,3
+jump,7235,1-1,3
+coinblock hit,7243,1-1,3
+coinblock hit,7290,1-1,3
+jump,7333,1-1,3
+jump,7398,1-1,3
+jump,7458,1-1,3
+jump,7578,1-1,3
+jump,7638,1-1,3
+jump,7698,1-1,3
+jump,7780,1-1,3
+goomba killed,7989,1-1,3
+goomba killed,8049,1-1,3
+jump,8115,1-1,3
+coinblock hit,8126,1-1,3
+jump,8175,1-1,3
+jump,8235,1-1,3
+jump,8316,1-1,3
+jump,8376,1-1,3
+jump,8650,1-1,3
+goomba killed,9816,1-2,3
+jump,9925,1-2,3
+coinblock hit,9959,1-2,3
+fire flower,9964,1-2,3
+jump,9999,1-2,3
+coinblock hit,10007,1-2,3
+coinblock hit,10056,1-2,3
+jump,10059,1-2,3
+coinblock hit,10103,1-2,3
+jump,10120,1-2,3
+jump,10194,1-2,3
+jump,10254,1-2,3
+jump,10314,1-2,3
+jump,10374,1-2,3
+jump,10434,1-2,3
+jump,10517,1-2,3
+koopa killed,10590,1-2,3
+koopa killed,10660,1-2,3
+jump,10825,1-2,3
+goomba killed,10947,1-2,3
+koopa killed,10953,1-2,3
+jump,10966,1-2,3
+jump,11026,1-2,3
+koopa killed,11030,1-2,3
+jump,11086,1-2,3
+goomba killed,11212,1-2,3
+jump,11257,1-2,3
+jump,11319,1-2,3
+koopa killed,11390,1-2,3
+jump,11582,1-2,3
+jump,11647,1-2,3
+jump,11716,1-2,3
+jump,11800,1-2,3
+goomba killed,11835,1-2,3
+jump,11860,1-2,3
+jump,11922,1-2,3
+jump,11982,1-2,3
+jump,12046,1-2,3
+jump,12115,1-2,3
+jump,12284,1-2,3
+jump,12344,1-2,3
+jump,12434,1-2,3
+jump,12508,1-2,3
+jump,12569,1-2,3
+jump,12629,1-2,3
+jump,12689,1-2,3
+goomba killed,12725,1-2,3
+jump,12759,1-2,3
+jump,12819,1-2,3
+jump,12885,1-2,3
+jump,12956,1-2,3
+jump,13022,1-2,3
+jump,13082,1-2,3
+jump,13193,1-2,3
+jump,13850,1-2,3
+jump,14088,1-2,3
+jump,14148,1-2,3
+goomba killed,14193,1-2,3
+jump,14210,1-2,3
+jump,14286,1-2,3
+jump,14346,1-2,3
+jump,14472,1-2,3
+jump,14541,1-2,3
+jump,14601,1-2,3
+jump,14713,1-2,3
+jump,14773,1-2,3
+jump,14833,1-2,3
+jump,14912,1-2,3
+jump,14972,1-2,3
+jump,16176,1-1,3
+jump,16402,1-1,3
+goomba killed,16443,1-1,3
+jump,16472,1-1,3
+coinblock hit,16482,1-1,3
+jump,16558,1-1,3
+coinblock hit,16606,1-1,3
+mushroom,16629,1-1,3
+jump,16674,1-1,3
+jump,16810,1-1,3
+jump,16897,1-1,3
+coinblock hit,16903,1-1,3
+jump,16957,1-1,3
+jump,17062,1-1,3
+jump,17122,1-1,3
+jump,17185,1-1,3
+jump,17253,1-1,3
+goomba killed,17300,1-1,3
+jump,17313,1-1,3
+jump,17373,1-1,3
+jump,17503,1-1,3
+jump,17563,1-1,3
+jump,17623,1-1,3
+jump,17684,1-1,3
+jump,17744,1-1,3
+jump,17805,1-1,3
+jump,17866,1-1,3
+jump,17926,1-1,3
+jump,17986,1-1,3
+mushroom,18045,1-1,3
+jump,18158,1-1,3
+jump,18274,1-1,3
+jump,18344,1-1,3
+fire flower,18386,1-1,3
+jump,18404,1-1,3
+jump,18549,1-1,3
+goomba killed,18752,1-1,3
+jump,18826,1-1,3
+jump,18910,1-1,3
+jump,18990,1-1,3
+coinblock hit,19035,1-1,3
+jump,19081,1-1,3
+goomba killed,19209,1-1,3
+goomba killed,19275,1-1,3
+jump,19371,1-1,3
+jump,19431,1-1,3
+coinblock hit,19437,1-1,3
+jump,19491,1-1,3
+coinblock hit,19495,1-1,3
+jump,19559,1-1,3
+jump,19619,1-1,3
+jump,19679,1-1,3
+jump,19775,1-1,3
+jump,19843,1-1,3
+jump,19920,1-1,3
+jump,19980,1-1,3
+fire flower,20018,1-1,3
+jump,20123,1-1,3
+goomba killed,20224,1-1,3
+goomba killed,20284,1-1,3
+jump,20376,1-1,3
+coinblock hit,20426,1-1,3
+jump,20436,1-1,3
+jump,20504,1-1,3
+coinblock hit,20552,1-1,3
+jump,20642,1-1,3
+jump,20702,1-1,3
+jump,20779,1-1,3
+jump,20942,1-1,3
+jump,21015,1-1,3
+jump,21075,1-1,3
+jump,21135,1-1,3
+jump,21251,1-1,3
+goomba killed,21339,1-1,3
+jump,21385,1-1,3
+coinblock hit,21395,1-1,3
+jump,21445,1-1,3
+jump,21505,1-1,3
+jump,21565,1-1,3
+jump,21625,1-1,3
+jump,21689,1-1,3
+jump,21767,1-1,3
+jump,21827,1-1,3
+goomba killed,23037,1-2,3
+jump,23099,1-2,3
+goomba killed,23103,1-2,3
+coinblock hit,23140,1-2,3
+fire flower,23146,1-2,3
+jump,23167,1-2,3
+coinblock hit,23188,1-2,3
+jump,23241,1-2,3
+coinblock hit,23284,1-2,3
+jump,23330,1-2,3
+jump,23398,1-2,3
+jump,23498,1-2,3
+jump,23584,1-2,3
+jump,23644,1-2,3
+jump,23704,1-2,3
+coinblock hit,23744,1-2,3
+jump,23775,1-2,3
+jump,23835,1-2,3
+jump,23895,1-2,3
+jump,23957,1-2,3
+jump,24017,1-2,3
+jump,24077,1-2,3
+jump,24178,1-2,3
+koopa killed,24283,1-2,3
+koopa killed,24371,1-2,3
+jump,24392,1-2,3
+coinblock hit,24399,1-2,3
+jump,24454,1-2,3
+jump,24581,1-2,3
+jump,24641,1-2,3
+koopa killed,24646,1-2,3
+jump,24701,1-2,3
+jump,24761,1-2,3
+jump,24838,1-2,3
+koopa killed,24847,1-2,3
+koopa killed,25081,1-2,3
+goomba killed,25257,1-2,3
+goomba killed,25317,1-2,3
+jump,25320,1-2,3
+koopa killed,25329,1-2,3
+jump,25380,1-2,3
+koopa killed,25430,1-2,3
+jump,25440,1-2,3
+jump,25503,1-2,3
+koopa killed,25516,1-2,3
+jump,25563,1-2,3
+jump,25681,1-2,3
+koopa killed,25692,1-2,3
+goomba killed,25846,1-2,3
+goomba killed,25932,1-2,3
+goomba killed,25998,1-2,3
+jump,26061,1-2,3
+jump,26147,1-2,3
+jump,26258,1-2,3
+koopa killed,26269,1-2,3
+goomba killed,26297,1-2,3
+goomba killed,26360,1-2,3
+jump,26395,1-2,3
+jump,26455,1-2,3
+jump,26515,1-2,3
+jump,26575,1-2,3
+jump,26741,1-2,3
+jump,26801,1-2,3
+goomba killed,26946,1-2,3
+goomba killed,27006,1-2,3
+jump,27039,1-2,3
+jump,27101,1-2,3
+jump,27203,1-2,3
+jump,27265,1-2,3
+jump,27343,1-2,3
+jump,27403,1-2,3
+jump,27463,1-2,3
+jump,27741,1-2,3
+jump,27801,1-2,3
+jump,27861,1-2,3
+jump,27921,1-2,3
+jump,27985,1-2,3
+jump,29136,1-3,3
+jump,29301,1-3,3
+jump,29406,1-3,3
+jump,29467,1-3,3
+jump,29549,1-3,3
+jump,29609,1-3,3
+goomba killed,29747,1-3,3
+goomba killed,29807,1-3,3
+jump,29867,1-3,3
+goomba killed,29867,1-3,3
+jump,29948,1-3,3
+jump,30051,1-3,3
+jump,30111,1-3,3
+jump,30183,1-3,3
+jump,30247,1-3,3
+jump,30313,1-3,3
+jump,30861,1-3,3
+jump,30985,1-3,3
+jump,31080,1-3,3
+jump,31182,1-3,3
+jump,31413,1-3,3
+goomba killed,31452,1-3,3
+jump,31480,1-3,3
+goomba killed,31516,1-3,3
+jump,31549,1-3,3
+jump,31620,1-3,3
+jump,31688,1-3,3
+jump,31785,1-3,3
+jump,31845,1-3,3
+jump,31914,1-3,3
+jump,32053,1-3,3
+jump,32113,1-3,3
+mushroom,32118,1-3,3
+jump,32289,1-3,3
+jump,32349,1-3,3
+jump,32548,1-3,3
+jump,32667,1-3,3
+jump,32790,1-3,3
+jump,32850,1-3,3
+jump,32910,1-3,3
+jump,32979,1-3,3
+jump,33046,1-3,3
+jump,33164,1-3,3
+jump,33224,1-3,3
+jump,33785,1-3,3
+jump,33905,1-3,3
+jump,33965,1-3,3
+jump,34059,1-3,3
+jump,34262,1-3,3
+jump,34322,1-3,3
+jump,34972,1-3,3
+jump,35040,1-3,3
+jump,35102,1-3,3
+jump,35214,1-3,3
+jump,35313,1-3,3
+jump,35373,1-3,3
+jump,35445,1-3,3
+jump,35505,1-3,3
+jump,35749,1-3,3
+jump,35809,1-3,3
+jump,35946,1-3,3
+jump,36006,1-3,3
+jump,36066,1-3,3
+jump,36126,1-3,3
+jump,36324,1-3,3
+jump,36384,1-3,3
+jump,36452,1-3,3
+jump,36524,1-3,3
+jump,36584,1-3,3
+jump,37656,1-4,3
+jump,37791,1-4,3
+jump,38015,1-4,3
+jump,38089,1-4,3
+jump,38853,1-4,3
+jump,38914,1-4,3
+jump,39083,1-4,3
+jump,39143,1-4,3
+jump,39203,1-4,3
+jump,39265,1-4,3
+jump,39488,1-4,3
+jump,39580,1-4,3
+jump,39664,1-4,3
+jump,39750,1-4,3
+jump,39843,1-4,3
+jump,39956,1-4,3
+jump,40016,1-4,3
+jump,40097,1-4,3
+jump,41192,1-1,3
+jump,41331,1-1,3
+coinblock hit,41345,1-1,3
+jump,41391,1-1,3
+goomba killed,41408,1-1,3
+jump,41451,1-1,3
+jump,41511,1-1,3
+mushroom,41570,1-1,3
+jump,41572,1-1,3
+jump,41814,1-1,3
+coinblock hit,41825,1-1,3
+jump,41916,1-1,3
+jump,41983,1-1,3
+coinblock hit,41988,1-1,3
+jump,42048,1-1,3
+jump,42173,1-1,3
+jump,42243,1-1,3
+goomba killed,42325,1-1,3
+jump,42372,1-1,3
+jump,42432,1-1,3
+jump,42583,1-1,3
+jump,42680,1-1,3
+goomba killed,42687,1-1,3
+jump,42740,1-1,3
+goomba killed,42747,1-1,3
+fire flower,42775,1-1,3
+jump,42800,1-1,3
+jump,43254,1-1,3
+jump,43373,1-1,3
+jump,43499,1-1,3
+goomba killed,43540,1-1,3
+koopa killed,43672,1-1,3
+jump,43723,1-1,3
+jump,43790,1-1,3
+jump,43855,1-1,3
+coinblock hit,43860,1-1,3
+jump,43915,1-1,3
+jump,44043,1-1,3
+coinblock hit,44052,1-1,3
+goomba killed,44105,1-1,3
+jump,44152,1-1,3
+coinblock hit,44157,1-1,3
+jump,44212,1-1,3
+coinblock hit,44215,1-1,3
+jump,44272,1-1,3
+fire flower,44354,1-1,3
+jump,44401,1-1,3
+jump,44461,1-1,3
+jump,44539,1-1,3
+jump,44599,1-1,3
+jump,44722,1-1,3
+jump,44834,1-1,3
+goomba killed,44836,1-1,3
+jump,44915,1-1,3
+jump,44975,1-1,3
+jump,45035,1-1,3
+jump,45145,1-1,3
+goomba killed,45257,1-1,3
+jump,45339,1-1,3
+coinblock hit,45395,1-1,3
+jump,45399,1-1,3
+coinblock hit,45453,1-1,3
+jump,45459,1-1,3
+jump,45531,1-1,3
+jump,45591,1-1,3
+jump,45661,1-1,3
+jump,45721,1-1,3
+jump,45781,1-1,3
+jump,45871,1-1,3
+goomba killed,45986,1-1,3
+jump,46028,1-1,3
+coinblock hit,46038,1-1,3
+jump,46125,1-1,3
+jump,46185,1-1,3
+jump,46245,1-1,3
+jump,46305,1-1,3
+jump,46365,1-1,3
+goomba killed,47632,1-2,3
+goomba killed,47692,1-2,3
+jump,47739,1-2,3
+fire flower,47784,1-2,3
+jump,47799,1-2,3
+coinblock hit,47808,1-2,3
+jump,47859,1-2,3
+coinblock hit,47866,1-2,3
+coinblock hit,47906,1-2,3
+jump,47922,1-2,3
+coinblock hit,47953,1-2,3
+jump,47985,1-2,3
+jump,48111,1-2,3
+jump,48171,1-2,3
+jump,48231,1-2,3
+jump,48346,1-2,3
+jump,48416,1-2,3
+jump,48476,1-2,3
+jump,48536,1-2,3
+jump,48778,1-2,3
+koopa killed,48842,1-2,3
+jump,48858,1-2,3
+jump,48988,1-2,3
+jump,49379,1-2,3
+goomba killed,49415,1-2,3
+jump,49545,1-2,3
+jump,50070,1-2,3
+jump,50283,1-2,3
+jump,50344,1-2,3
+mushroom,50354,1-2,3
+coinblock hit,50401,1-2,3
+jump,50404,1-2,3
+jump,50596,1-2,3
+coinblock hit,50603,1-2,3
+coinblock hit,50643,1-2,3
+jump,50656,1-2,3
+coinblock hit,50691,1-2,3
+jump,50735,1-2,3
+jump,50795,1-2,3
+jump,50857,1-2,3
+jump,50928,1-2,3
+jump,51031,1-2,3
+jump,51217,1-2,3
+koopa killed,51355,1-2,3
+jump,51374,1-2,3
+jump,51447,1-2,3
+koopa killed,51466,1-2,3
+jump,51507,1-2,3
+jump,51567,1-2,3
+koopa killed,51623,1-2,3
+jump,51627,1-2,3
+jump,51726,1-2,3
+jump,51794,1-2,3
+jump,52021,1-2,3
+jump,52255,1-2,3
+goomba killed,52335,1-2,3
+jump,52376,1-2,3
+koopa killed,52384,1-2,3
+jump,52443,1-2,3
+koopa killed,52462,1-2,3
+jump,52503,1-2,3
+jump,52563,1-2,3
+jump,52637,1-2,3
+koopa killed,52649,1-2,3
+jump,52879,1-2,3
+jump,52960,1-2,3
+goomba killed,53002,1-2,3
+jump,53046,1-2,3
+jump,53108,1-2,3
+jump,53168,1-2,3
+koopa killed,53217,1-2,3
+jump,53242,1-2,3
+jump,53316,1-2,3
+koopa killed,53318,1-2,3
+jump,53376,1-2,3
+jump,53523,1-2,3
+jump,53589,1-2,3
+jump,53658,1-2,3
+jump,54432,1-2,3
+jump,54492,1-2,3
+jump,54555,1-2,3
+jump,54742,1-2,3
+jump,55361,1-2,3
+jump,55421,1-2,3
+jump,55481,1-2,3
+jump,55541,1-2,3
+jump,56476,1-3,3
+jump,56545,1-3,3
+jump,56650,1-3,3
+jump,56871,1-3,3
+goomba killed,56907,1-3,3
+jump,56938,1-3,3
+goomba killed,56980,1-3,3
+jump,57022,1-3,3
+jump,57105,1-3,3
+jump,57211,1-3,3
+jump,57271,1-3,3
+jump,57331,1-3,3
+jump,57423,1-3,3
+jump,57522,1-3,3
+jump,57582,1-3,3
+jump,57649,1-3,3
+fire flower,57684,1-3,3
+jump,57733,1-3,3
+jump,57888,1-3,3
+jump,57948,1-3,3
+jump,58083,1-3,3
+koopa killed,58497,1-3,3
+koopa killed,58557,1-3,3
+jump,58610,1-3,3
+jump,58701,1-3,3
+jump,58846,1-3,3
+jump,59134,1-3,3
+jump,59214,1-3,3
+jump,59328,1-3,3
+jump,59388,1-3,3
+jump,59503,1-3,3
+jump,59579,1-3,3
+jump,59656,1-3,3
+jump,59882,1-3,3
+jump,59942,1-3,3
+jump,60002,1-3,3
+jump,60069,1-3,3
+jump,60143,1-3,3
+jump,61070,1-4,3
+jump,61397,1-4,3
+jump,61458,1-4,3
+mushroom,61527,1-4,3
+jump,61530,1-4,3
+jump,61590,1-4,3
+jump,62446,1-4,3
+jump,62793,1-4,3
+jump,62855,1-4,3
+jump,62923,1-4,3
+mushroom,62925,1-4,3
+jump,62992,1-4,3
+jump,63074,1-4,3
+jump,63836,1-4,3
+jump,65032,1-1,3
+jump,65195,1-1,3
+coinblock hit,65211,1-1,3
+jump,65255,1-1,3
+goomba killed,65275,1-1,3
+jump,65320,1-1,3
+coinblock hit,65375,1-1,3
+jump,65380,1-1,3
+mushroom,65385,1-1,3
+jump,65601,1-1,3
+jump,65661,1-1,3
+coinblock hit,65663,1-1,3
+jump,65721,1-1,3
+jump,65835,1-1,3
+jump,65946,1-1,3
+goomba killed,65981,1-1,3
+jump,66009,1-1,3
+goomba killed,66091,1-1,3
+jump,66129,1-1,3
+jump,66295,1-1,3
+jump,66385,1-1,3
+goomba killed,66393,1-1,3
+jump,66445,1-1,3
+goomba killed,66453,1-1,3
+fire flower,66479,1-1,3
+jump,66505,1-1,3
+jump,66677,1-1,3
+jump,66786,1-1,3
+jump,66852,1-1,3
+jump,66913,1-1,3
+jump,66973,1-1,3
+jump,67064,1-1,3
+jump,67146,1-1,3
+jump,67206,1-1,3
+jump,67280,1-1,3
+jump,67340,1-1,3
+jump,67464,1-1,3
+jump,67524,1-1,3
+jump,67584,1-1,3
+jump,67656,1-1,3
+goomba killed,67776,1-1,3
+jump,67812,1-1,3
+coinblock hit,67823,1-1,3
+jump,67902,1-1,3
+jump,67962,1-1,3
+jump,68039,1-1,3
+jump,68100,1-1,3
+jump,68185,1-1,3
+goomba killed,69556,1-2,3
+jump,69674,1-2,3
+fire flower,69718,1-2,3
+jump,69734,1-2,3
+coinblock hit,69742,1-2,3
+jump,69819,1-2,3
+jump,69906,1-2,3
+jump,70088,1-2,3
+coinblock hit,70097,1-2,3
+coinblock hit,70137,1-2,3
+jump,70155,1-2,3
+coinblock hit,70184,1-2,3
+jump,70217,1-2,3
+jump,70277,1-2,3
+jump,70337,1-2,3
+koopa killed,70470,1-2,3
+jump,70526,1-2,3
+coinblock hit,70539,1-2,3
+jump,70593,1-2,3
+jump,70694,1-2,3
+jump,70767,1-2,3
+koopa killed,70786,1-2,3
+jump,70827,1-2,3
+jump,70887,1-2,3
+jump,70954,1-2,3
+koopa killed,70966,1-2,3
+jump,71014,1-2,3
+jump,71074,1-2,3
+koopa killed,71132,1-2,3
+jump,71134,1-2,3
+jump,71194,1-2,3
+jump,71254,1-2,3
+jump,71314,1-2,3
+koopa killed,71451,1-2,3
+jump,71454,1-2,3
+goomba killed,71524,1-2,3
+jump,71525,1-2,3
+koopa killed,71532,1-2,3
+jump,71591,1-2,3
+koopa killed,71609,1-2,3
+jump,71651,1-2,3
+jump,71711,1-2,3
+goomba killed,71989,1-2,3
+goomba killed,72050,1-2,3
+jump,72145,1-2,3
+jump,72213,1-2,3
+jump,72346,1-2,3
+jump,72406,1-2,3
+jump,72466,1-2,3
+jump,72532,1-2,3
+jump,72597,1-2,3
+jump,72665,1-2,3
+jump,72725,1-2,3
+koopa killed,72784,1-2,3
+jump,72787,1-2,3
+jump,72850,1-2,3
+koopa killed,72881,1-2,3
+jump,72910,1-2,3
+jump,72971,1-2,3
+koopa killed,72984,1-2,3
+jump,73071,1-2,3
+jump,73139,1-2,3
+jump,73206,1-2,3
+koopa killed,73208,1-2,3
+jump,73297,1-2,3
+jump,74043,1-2,3
+jump,74103,1-2,3
+jump,74196,1-2,3
+koopa killed,74275,1-2,3
+jump,74382,1-2,3
+jump,75161,1-2,3
+jump,75232,1-2,3
+jump,75482,1-2,3
+jump,75542,1-2,3
+goomba killed,75595,1-2,3
+jump,75602,1-2,3
+jump,75672,1-2,3
+jump,75734,1-2,3
+jump,75794,1-2,3
+jump,75907,1-2,3
+goomba killed,75956,1-2,3
+jump,75967,1-2,3
+jump,76037,1-2,3
+jump,76141,1-2,3
+jump,76201,1-2,3
+jump,76313,1-2,3
+jump,76470,1-2,3
+jump,76628,1-2,3
+jump,76693,1-2,3
+jump,76754,1-2,3
+jump,77042,1-2,3
+jump,77102,1-2,3
+jump,77162,1-2,3
+jump,77229,1-2,3
+jump,77312,1-2,3
+jump,78507,1-3,3
+jump,78609,1-3,3
+jump,78716,1-3,3
+jump,78776,1-3,3
+jump,78935,1-3,3
+goomba killed,78971,1-3,3
+jump,79006,1-3,3
+goomba killed,79043,1-3,3
+jump,79076,1-3,3
+jump,79176,1-3,3
+jump,79236,1-3,3
+jump,79297,1-3,3
+jump,79427,1-3,3
+mushroom,79491,1-3,3
+jump,79658,1-3,3
+jump,79718,1-3,3
+jump,79929,1-3,3
+jump,80025,1-3,3
+jump,80142,1-3,3
+jump,80202,1-3,3
+jump,80270,1-3,3
+jump,80330,1-3,3
+jump,80390,1-3,3
+jump,80468,1-3,3
+jump,80528,1-3,3
+jump,80588,1-3,3
+jump,80648,1-3,3
+jump,80837,1-3,3
+jump,80897,1-3,3
+jump,80957,1-3,3
+jump,81017,1-3,3
+jump,82125,1-4,3
+jump,82674,1-4,3
+jump,82742,1-4,3
+jump,83508,1-4,3
+jump,83568,1-4,3
+jump,83730,1-4,3
+jump,83790,1-4,3
+jump,83850,1-4,3
+jump,83990,1-4,3
+jump,84082,1-4,3
+jump,84143,1-4,3
+jump,84209,1-4,3
+jump,84313,1-4,3
+jump,84391,1-4,3
+jump,84466,1-4,3
+jump,84616,1-4,3
+jump,84677,1-4,3
+jump,85233,1-4,3
+jump,85557,1-4,3
+jump,85618,1-4,3
+jump,86384,1-4,3
+jump,86444,1-4,3
+jump,86640,1-4,3
+jump,204,1-1,4
+jump,290,1-1,4
+coinblock hit,305,1-1,4
+goomba killed,349,1-1,4
+jump,352,1-1,4
+jump,416,1-1,4
+mushroom,439,1-1,4
+jump,557,1-1,4
+coinblock hit,566,1-1,4
+jump,617,1-1,4
+jump,683,1-1,4
+jump,743,1-1,4
+jump,803,1-1,4
+jump,863,1-1,4
+jump,1008,1-1,4
+jump,1068,1-1,4
+jump,1128,1-1,4
+jump,1586,1-1,4
+jump,1650,1-1,4
+goomba killed,1668,1-1,4
+jump,1712,1-1,4
+coinblock hit,1719,1-1,4
+goomba killed,1728,1-1,4
+jump,1805,1-1,4
+jump,1865,1-1,4
+jump,1925,1-1,4
+jump,3330,1-2,4
+mushroom,3399,1-2,4
+jump,3400,1-2,4
+jump,3550,1-2,4
+jump,3618,1-2,4
+jump,3678,1-2,4
+koopa killed,3714,1-2,4
+jump,3738,1-2,4
+coinblock hit,3788,1-2,4
+jump,3801,1-2,4
+jump,3901,1-2,4
+jump,3967,1-2,4
+jump,4048,1-2,4
+jump,4152,1-2,4
+jump,4224,1-2,4
+jump,4305,1-2,4
+jump,4423,1-2,4
+jump,4483,1-2,4
+jump,5045,1-2,4
+goomba killed,5064,1-2,4
+jump,5105,1-2,4
+mushroom,5110,1-2,4
+coinblock hit,5115,1-2,4
+jump,5165,1-2,4
+coinblock hit,5173,1-2,4
+coinblock hit,5221,1-2,4
+jump,5331,1-2,4
+coinblock hit,5337,1-2,4
+jump,5391,1-2,4
+jump,5451,1-2,4
+goomba killed,5560,1-2,4
+jump,5585,1-2,4
+jump,5665,1-2,4
+jump,5725,1-2,4
+coinblock hit,5758,1-2,4
+jump,5785,1-2,4
+coinblock hit,5798,1-2,4
+coinblock hit,5845,1-2,4
+jump,5850,1-2,4
+coinblock hit,5885,1-2,4
+jump,5910,1-2,4
+coinblock hit,5931,1-2,4
+jump,5970,1-2,4
+coinblock hit,5979,1-2,4
+coinblock hit,6019,1-2,4
+jump,6030,1-2,4
+jump,6161,1-2,4
+koopa killed,6168,1-2,4
+jump,6257,1-2,4
+koopa killed,6314,1-2,4
+jump,6332,1-2,4
+jump,6450,1-2,4
+jump,6511,1-2,4
+jump,6620,1-2,4
+coinblock hit,6623,1-2,4
+koopa killed,6626,1-2,4
+jump,6691,1-2,4
+jump,6751,1-2,4
+jump,6813,1-2,4
+star,6853,1-2,4
+koopa killed,6872,1-2,4
+jump,6900,1-2,4
+koopa killed,6959,1-2,4
+goomba killed,7063,1-2,4
+jump,7072,1-2,4
+goomba killed,7206,1-2,4
+jump,7264,1-2,4
+koopa killed,7270,1-2,4
+coinblock hit,7294,1-2,4
+goomba killed,7321,1-2,4
+jump,7377,1-2,4
+goomba killed,7381,1-2,4
+koopa killed,7406,1-2,4
+jump,7458,1-2,4
+jump,7574,1-2,4
+jump,7765,1-2,4
+goomba killed,7801,1-2,4
+jump,7825,1-2,4
+jump,7886,1-2,4
+jump,7946,1-2,4
+jump,8006,1-2,4
+jump,8066,1-2,4
+jump,8132,1-2,4
+jump,8192,1-2,4
+jump,8252,1-2,4
+koopa killed,8306,1-2,4
+jump,8312,1-2,4
+jump,8373,1-2,4
+koopa killed,8385,1-2,4
+jump,8444,1-2,4
+koopa killed,8454,1-2,4
+jump,8504,1-2,4
+fire flower,8549,1-2,4
+jump,8581,1-2,4
+koopa killed,8590,1-2,4
+jump,8648,1-2,4
+jump,8708,1-2,4
+jump,8969,1-2,4
+jump,9029,1-2,4
+jump,9106,1-2,4
+jump,10007,1-3,4
+jump,10067,1-3,4
+jump,10127,1-3,4
+jump,10192,1-3,4
+jump,10252,1-3,4
+jump,10312,1-3,4
+jump,10372,1-3,4
+jump,10432,1-3,4
+jump,10506,1-3,4
+jump,10582,1-3,4
+jump,10653,1-3,4
+jump,10821,1-3,4
+jump,10897,1-3,4
+jump,10975,1-3,4
+jump,11041,1-3,4
+jump,11101,1-3,4
+jump,11163,1-3,4
+jump,11256,1-3,4
+jump,11322,1-3,4
+jump,11383,1-3,4
+jump,11444,1-3,4
+mushroom,11447,1-3,4
+jump,11547,1-3,4
+jump,11618,1-3,4
+jump,11704,1-3,4
+jump,11764,1-3,4
+goomba killed,11784,1-3,4
+jump,11824,1-3,4
+jump,11949,1-3,4
+jump,12009,1-3,4
+jump,12069,1-3,4
+jump,12539,1-3,4
+jump,12606,1-3,4
+jump,12666,1-3,4
+jump,12790,1-3,4
+jump,12871,1-3,4
+jump,12931,1-3,4
+jump,12991,1-3,4
+jump,13051,1-3,4
+jump,13154,1-3,4
+jump,13214,1-3,4
+jump,13324,1-3,4
+jump,13389,1-3,4
+jump,13449,1-3,4
+jump,13529,1-3,4
+jump,13589,1-3,4
+jump,13665,1-3,4
+jump,14539,1-4,4
+jump,14624,1-4,4
+jump,14684,1-4,4
+jump,14871,1-4,4
+jump,14990,1-4,4
+jump,15293,1-4,4
+jump,15370,1-4,4
+jump,15430,1-4,4
+jump,15490,1-4,4
+jump,15550,1-4,4
+jump,15613,1-4,4
+jump,15673,1-4,4
+jump,15733,1-4,4
+jump,15793,1-4,4
+jump,15853,1-4,4
+jump,838,1-1,5
+jump,1003,1-1,5
+coinblock hit,1018,1-1,5
+goomba killed,1025,1-1,5
+jump,1079,1-1,5
+mushroom,1158,1-1,5
+jump,1168,1-1,5
+coinblock hit,1182,1-1,5
+jump,1335,1-1,5
+jump,1454,1-1,5
+jump,1553,1-1,5
+goomba killed,1581,1-1,5
+jump,1626,1-1,5
+jump,1787,1-1,5
+goomba killed,1828,1-1,5
+jump,1847,1-1,5
+jump,2129,1-1,5
+jump,2218,1-1,5
+goomba killed,2254,1-1,5
+jump,2278,1-1,5
+goomba killed,2315,1-1,5
+fire flower,2315,1-1,5
+jump,2340,1-1,5
+jump,2400,1-1,5
+jump,2554,1-1,5
+koopa killed,2592,1-1,5
+jump,2672,1-1,5
+jump,2732,1-1,5
+goomba killed,2769,1-1,5
+jump,2837,1-1,5
+coinblock hit,2843,1-1,5
+jump,2956,1-1,5
+coinblock hit,2967,1-1,5
+coinblock hit,3007,1-1,5
+jump,3020,1-1,5
+coinblock hit,3052,1-1,5
+jump,3080,1-1,5
+coinblock hit,3100,1-1,5
+koopa killed,3145,1-1,5
+jump,3218,1-1,5
+jump,3281,1-1,5
+coinblock hit,3292,1-1,5
+goomba killed,3350,1-1,5
+coinblock hit,3352,1-1,5
+jump,3361,1-1,5
+jump,3423,1-1,5
+jump,3485,1-1,5
+jump,3578,1-1,5
+goomba killed,3602,1-1,5
+goomba killed,3662,1-1,5
+goomba killed,3722,1-1,5
+jump,3837,1-1,5
+jump,3897,1-1,5
+jump,3969,1-1,5
+jump,4029,1-1,5
+coinblock hit,4032,1-1,5
+jump,4089,1-1,5
+jump,4166,1-1,5
+coinblock hit,4175,1-1,5
+jump,4226,1-1,5
+jump,4286,1-1,5
+jump,4346,1-1,5
+jump,4408,1-1,5
+jump,4468,1-1,5
+jump,4544,1-1,5
+jump,4619,1-1,5
+jump,4679,1-1,5
+jump,4764,1-1,5
+goomba killed,4864,1-1,5
+jump,4936,1-1,5
+jump,5041,1-1,5
+jump,5101,1-1,5
+jump,5161,1-1,5
+jump,5273,1-1,5
+jump,6311,1-2,5
+goomba killed,6787,1-2,5
+goomba killed,6847,1-2,5
+jump,6896,1-2,5
+fire flower,6940,1-2,5
+jump,6967,1-2,5
+jump,7065,1-2,5
+jump,7222,1-2,5
+jump,7284,1-2,5
+coinblock hit,7300,1-2,5
+jump,7351,1-2,5
+jump,7411,1-2,5
+goomba killed,7471,1-2,5
+jump,7503,1-2,5
+jump,7570,1-2,5
+jump,7630,1-2,5
+jump,7690,1-2,5
+jump,7750,1-2,5
+koopa killed,7936,1-2,5
+koopa killed,8051,1-2,5
+jump,8141,1-2,5
+jump,8201,1-2,5
+jump,8261,1-2,5
+koopa killed,8322,1-2,5
+goomba killed,8383,1-2,5
+goomba killed,8594,1-2,5
+goomba killed,8654,1-2,5
+goomba killed,8714,1-2,5
+jump,8716,1-2,5
+jump,8838,1-2,5
+goomba killed,9009,1-2,5
+goomba killed,9069,1-2,5
+jump,9146,1-2,5
+jump,9270,1-2,5
+jump,9459,1-2,5
+koopa killed,9506,1-2,5
+jump,9647,1-2,5
+jump,9750,1-2,5
+goomba killed,9773,1-2,5
+jump,9824,1-2,5
+jump,10007,1-2,5
+jump,10079,1-2,5
+jump,10200,1-2,5
+koopa killed,10205,1-2,5
+goomba killed,10231,1-2,5
+jump,10260,1-2,5
+goomba killed,10291,1-2,5
+jump,10428,1-2,5
+jump,10488,1-2,5
+jump,10590,1-2,5
+jump,10667,1-2,5
+goomba killed,10684,1-2,5
+jump,10988,1-2,5
+jump,11050,1-2,5
+jump,11120,1-2,5
+jump,11247,1-2,5
+jump,11347,1-2,5
+jump,12532,1-3,5
+jump,12615,1-3,5
+jump,12795,1-3,5
+jump,12979,1-3,5
+jump,13039,1-3,5
+jump,13436,1-3,5
+jump,13504,1-3,5
+jump,13564,1-3,5
+jump,13624,1-3,5
+mushroom,13700,1-3,5
+jump,13857,1-3,5
+jump,13917,1-3,5
+jump,14064,1-3,5
+jump,14151,1-3,5
+jump,14329,1-3,5
+jump,14452,1-3,5
+jump,14534,1-3,5
+jump,14594,1-3,5
+jump,14765,1-3,5
+jump,14875,1-3,5
+jump,15493,1-3,5
+jump,15610,1-3,5
+jump,15715,1-3,5
+jump,15806,1-3,5
+jump,15966,1-3,5
+jump,16090,1-3,5
+jump,16186,1-3,5
+jump,16246,1-3,5
+jump,16315,1-3,5
+jump,16408,1-3,5
+jump,16479,1-3,5
+jump,16539,1-3,5
+jump,16768,1-3,5
+jump,16828,1-3,5
+jump,16888,1-3,5
+jump,17038,1-3,5
+koopa killed,17972,1-4,5
+jump,17977,1-4,5
+koopa killed,18043,1-4,5
+koopa killed,18174,1-4,5
+jump,18326,1-4,5
+jump,18386,1-4,5
+jump,18447,1-4,5
+goomba killed,18563,1-4,5
+jump,19237,1-4,5
+jump,19747,1-4,5
+jump,19833,1-4,5
+koopa killed,19880,1-4,5
+jump,19893,1-4,5
+jump,20176,1-4,5
+jump,20239,1-4,5
+jump,20299,1-4,5
+jump,20359,1-4,5
+jump,20506,1-4,5
+jump,20789,1-4,5
+jump,20849,1-4,5
+jump,21097,1-4,5
+jump,21172,1-4,5
+goomba killed,22681,1-1,5
+jump,22760,1-1,5
+goomba killed,22795,1-1,5
+jump,22839,1-1,5
+jump,22901,1-1,5
+goomba killed,22951,1-1,5
+jump,22980,1-1,5
+jump,23040,1-1,5
+jump,23100,1-1,5
+jump,23336,1-1,5
+jump,23465,1-1,5
+mushroom,23579,1-1,5
+jump,23586,1-1,5
+jump,23677,1-1,5
+jump,23737,1-1,5
+koopa killed,23777,1-1,5
+jump,23814,1-1,5
+goomba killed,23859,1-1,5
+jump,23924,1-1,5
+jump,24017,1-1,5
+koopa killed,24017,1-1,5
+jump,24077,1-1,5
+jump,24168,1-1,5
+coinblock hit,24176,1-1,5
+jump,24228,1-1,5
+jump,24366,1-1,5
+jump,24927,1-1,5
+jump,25012,1-1,5
+jump,25180,1-1,5
+coinblock hit,25192,1-1,5
+jump,25307,1-1,5
+jump,25376,1-1,5
+jump,25442,1-1,5
+star,25513,1-1,5
+jump,25559,1-1,5
+goomba killed,25663,1-1,5
+goomba killed,25726,1-1,5
+jump,25786,1-1,5
+goomba killed,25786,1-1,5
+jump,25846,1-1,5
+jump,25921,1-1,5
+jump,25981,1-1,5
+goomba killed,26051,1-1,5
+jump,26073,1-1,5
+jump,26133,1-1,5
+jump,26227,1-1,5
+jump,27714,1-2,5
+goomba killed,27744,1-2,5
+koopa killed,27758,1-2,5
+jump,27813,1-2,5
+jump,27877,1-2,5
+mushroom,27886,1-2,5
+coinblock hit,27908,1-2,5
+jump,28099,1-2,5
+jump,28165,1-2,5
+jump,28234,1-2,5
+koopa killed,28269,1-2,5
+jump,28471,1-2,5
+koopa killed,28529,1-2,5
+jump,28542,1-2,5
+jump,28748,1-2,5
+jump,28808,1-2,5
+jump,28913,1-2,5
+goomba killed,28961,1-2,5
+jump,28978,1-2,5
+jump,29069,1-2,5
+jump,29547,1-2,5
+goomba killed,29547,1-2,5
+jump,29634,1-2,5
+jump,29816,1-2,5
+goomba killed,29864,1-2,5
+jump,29876,1-2,5
+jump,29938,1-2,5
+goomba killed,29960,1-2,5
+jump,29999,1-2,5
+coinblock hit,30020,1-2,5
+jump,30123,1-2,5
+jump,30429,1-2,5
+jump,30489,1-2,5
+jump,30608,1-2,5
+goomba killed,30622,1-2,5
+koopa killed,30626,1-2,5
+jump,30668,1-2,5
+goomba killed,30682,1-2,5
+koopa killed,31033,1-2,5
+jump,31054,1-2,5
+koopa killed,31110,1-2,5
+jump,31296,1-2,5
+koopa killed,31350,1-2,5
+goomba killed,31376,1-2,5
+jump,31600,1-2,5
+koopa killed,31647,1-2,5
+jump,31675,1-2,5
+jump,31735,1-2,5
+jump,31854,1-2,5
+jump,32749,1-2,5
+goomba killed,32904,1-2,5
+jump,33085,1-2,5
+jump,33248,1-2,5
+jump,33308,1-2,5
+jump,33451,1-2,5
+jump,33511,1-2,5
+jump,33635,1-2,5
+jump,33736,1-2,5
+jump,33954,1-2,5
+jump,34048,1-2,5
+jump,34210,1-2,5
+jump,34271,1-2,5
+jump,34558,1-2,5
+jump,34779,1-2,5
+jump,34839,1-2,5
+jump,34919,1-2,5
+jump,35922,1-3,5
+jump,36001,1-3,5
+jump,36190,1-3,5
+jump,36329,1-3,5
+jump,36437,1-3,5
+jump,36500,1-3,5
+jump,36579,1-3,5
+jump,36661,1-3,5
+jump,36721,1-3,5
+jump,36809,1-3,5
+jump,36942,1-3,5
+fire flower,36979,1-3,5
+jump,37002,1-3,5
+jump,37158,1-3,5
+jump,37221,1-3,5
+jump,37371,1-3,5
+jump,37792,1-3,5
+jump,37878,1-3,5
+jump,38001,1-3,5
+jump,38319,1-3,5
+jump,38404,1-3,5
+jump,38527,1-3,5
+koopa killed,38572,1-3,5
+koopa killed,38632,1-3,5
+jump,38828,1-3,5
+jump,38903,1-3,5
+jump,39022,1-3,5
+jump,39210,1-3,5
+jump,39270,1-3,5
+jump,39384,1-3,5
+jump,39563,1-3,5
+jump,40275,1-4,5
+jump,40354,1-4,5
+jump,40414,1-4,5
+jump,40677,1-4,5
+jump,40738,1-4,5
+jump,40848,1-4,5
+jump,40908,1-4,5
+jump,40979,1-4,5
+jump,41039,1-4,5
+jump,41099,1-4,5
+jump,41182,1-4,5
+jump,41262,1-4,5
+jump,283,1-1,6
+jump,393,1-1,6
+coinblock hit,402,1-1,6
+jump,453,1-1,6
+goomba killed,467,1-1,6
+jump,513,1-1,6
+mushroom,569,1-1,6
+jump,573,1-1,6
+jump,681,1-1,6
+jump,741,1-1,6
+jump,804,1-1,6
+coinblock hit,862,1-1,6
+jump,864,1-1,6
+jump,924,1-1,6
+jump,984,1-1,6
+jump,1044,1-1,6
+goomba killed,1048,1-1,6
+jump,1104,1-1,6
+jump,1164,1-1,6
+goomba killed,1201,1-1,6
+jump,1230,1-1,6
+goomba killed,1261,1-1,6
+jump,1315,1-1,6
+jump,1403,1-1,6
+jump,1472,1-1,6
+jump,1538,1-1,6
+mushroom,1543,1-1,6
+jump,1673,1-1,6
+jump,1739,1-1,6
+goomba killed,1770,1-1,6
+jump,1806,1-1,6
+jump,1871,1-1,6
+fire flower,1874,1-1,6
+jump,2037,1-1,6
+jump,2139,1-1,6
+goomba killed,2228,1-1,6
+jump,2260,1-1,6
+jump,2320,1-1,6
+coinblock hit,2331,1-1,6
+jump,2384,1-1,6
+jump,2445,1-1,6
+coinblock hit,2455,1-1,6
+coinblock hit,2495,1-1,6
+jump,2517,1-1,6
+jump,2594,1-1,6
+goomba killed,2625,1-1,6
+goomba killed,2698,1-1,6
+jump,2749,1-1,6
+jump,2833,1-1,6
+fire flower,2834,1-1,6
+jump,2933,1-1,6
+jump,2993,1-1,6
+jump,3053,1-1,6
+jump,3119,1-1,6
+goomba killed,3150,1-1,6
+jump,3179,1-1,6
+jump,3244,1-1,6
+goomba killed,3275,1-1,6
+jump,3304,1-1,6
+jump,3364,1-1,6
+coinblock hit,3386,1-1,6
+coinblock hit,3426,1-1,6
+jump,3449,1-1,6
+jump,3510,1-1,6
+jump,3570,1-1,6
+jump,3630,1-1,6
+jump,3691,1-1,6
+jump,3754,1-1,6
+jump,3830,1-1,6
+jump,3893,1-1,6
+goomba killed,3919,1-1,6
+coinblock hit,3943,1-1,6
+jump,4018,1-1,6
+jump,4078,1-1,6
+jump,4148,1-1,6
+jump,5470,1-2,6
+goomba killed,5517,1-2,6
+goomba killed,5577,1-2,6
+jump,5588,1-2,6
+coinblock hit,5595,1-2,6
+jump,5667,1-2,6
+fire flower,5705,1-2,6
+jump,5746,1-2,6
+jump,5875,1-2,6
+jump,5935,1-2,6
+jump,5995,1-2,6
+jump,6055,1-2,6
+jump,6115,1-2,6
+goomba killed,6125,1-2,6
+jump,6175,1-2,6
+coinblock hit,6182,1-2,6
+jump,6235,1-2,6
+koopa killed,6289,1-2,6
+jump,6295,1-2,6
+coinblock hit,6334,1-2,6
+jump,6356,1-2,6
+koopa killed,6363,1-2,6
+jump,6441,1-2,6
+koopa killed,6460,1-2,6
+jump,6550,1-2,6
+coinblock hit,6556,1-2,6
+koopa killed,6557,1-2,6
+koopa killed,6721,1-2,6
+goomba killed,6740,1-2,6
+jump,6788,1-2,6
+jump,6985,1-2,6
+jump,7206,1-2,6
+koopa killed,7213,1-2,6
+coinblock hit,7227,1-2,6
+goomba killed,7239,1-2,6
+goomba killed,7299,1-2,6
+jump,7319,1-2,6
+jump,7467,1-2,6
+jump,7536,1-2,6
+koopa killed,7555,1-2,6
+jump,7596,1-2,6
+jump,8129,1-2,6
+jump,8189,1-2,6
+jump,8473,1-2,6
+jump,8533,1-2,6
+jump,8600,1-2,6
+jump,9621,1-3,6
+jump,9681,1-3,6
+jump,9741,1-3,6
+jump,9805,1-3,6
+jump,9891,1-3,6
+jump,9951,1-3,6
+jump,10024,1-3,6
+jump,10084,1-3,6
+jump,10163,1-3,6
+jump,10242,1-3,6
+jump,10306,1-3,6
+jump,10423,1-3,6
+goomba killed,10452,1-3,6
+jump,10534,1-3,6
+jump,10594,1-3,6
+jump,11242,1-3,6
+jump,11302,1-3,6
+jump,11362,1-3,6
+jump,11436,1-3,6
+jump,11496,1-3,6
+jump,11620,1-3,6
+goomba killed,11671,1-3,6
+jump,11680,1-3,6
+goomba killed,11738,1-3,6
+jump,11740,1-3,6
+jump,11800,1-3,6
+jump,11867,1-3,6
+jump,11927,1-3,6
+jump,11987,1-3,6
+jump,12126,1-3,6
+jump,12186,1-3,6
+jump,12369,1-3,6
+jump,12429,1-3,6
+jump,12512,1-3,6
+jump,12601,1-3,6
+jump,12709,1-3,6
+jump,12769,1-3,6
+jump,12829,1-3,6
+jump,13376,1-3,6
+jump,13460,1-3,6
+jump,13520,1-3,6
+jump,13690,1-3,6
+jump,13750,1-3,6
+jump,14261,1-3,6
+jump,14381,1-3,6
+jump,14476,1-3,6
+jump,14629,1-3,6
+coinblock hit,14636,1-3,6
+coinblock hit,14690,1-3,6
+jump,14719,1-3,6
+jump,14798,1-3,6
+jump,14858,1-3,6
+jump,14918,1-3,6
+jump,15031,1-3,6
+jump,15103,1-3,6
+jump,15163,1-3,6
+jump,15228,1-3,6
+jump,15288,1-3,6
+jump,15357,1-3,6
+jump,16246,1-4,6
+jump,16378,1-4,6
+jump,16438,1-4,6
+mushroom,16498,1-4,6
+jump,16500,1-4,6
+jump,17430,1-1,6
+jump,17527,1-1,6
+coinblock hit,17574,1-1,6
+jump,17587,1-1,6
+goomba killed,17625,1-1,6
+jump,17658,1-1,6
+coinblock hit,17698,1-1,6
+mushroom,17722,1-1,6
+jump,17735,1-1,6
+jump,17872,1-1,6
+jump,17932,1-1,6
+coinblock hit,17939,1-1,6
+jump,17992,1-1,6
+jump,18052,1-1,6
+jump,18112,1-1,6
+goomba killed,18127,1-1,6
+jump,18172,1-1,6
+jump,18234,1-1,6
+jump,18301,1-1,6
+goomba killed,18327,1-1,6
+jump,18361,1-1,6
+jump,18426,1-1,6
+jump,18505,1-1,6
+jump,18568,1-1,6
+jump,18635,1-1,6
+jump,18710,1-1,6
+mushroom,18716,1-1,6
+jump,18814,1-1,6
+jump,18876,1-1,6
+jump,18949,1-1,6
+goomba killed,18958,1-1,6
+jump,19021,1-1,6
+jump,19135,1-1,6
+jump,19219,1-1,6
+jump,19279,1-1,6
+goomba killed,19353,1-1,6
+coinblock hit,19359,1-1,6
+jump,19397,1-1,6
+jump,19462,1-1,6
+coinblock hit,19513,1-1,6
+jump,19561,1-1,6
+jump,19621,1-1,6
+coinblock hit,19628,1-1,6
+jump,19681,1-1,6
+jump,19786,1-1,6
+star,19853,1-1,6
+koopa killed,19883,1-1,6
+goomba killed,20009,1-1,6
+goomba killed,20078,1-1,6
+jump,20133,1-1,6
+jump,20193,1-1,6
+jump,20256,1-1,6
+jump,20316,1-1,6
+goomba killed,20397,1-1,6
+jump,20409,1-1,6
+jump,20469,1-1,6
+jump,20529,1-1,6
+jump,21860,1-2,6
+fire flower,21902,1-2,6
+jump,21920,1-2,6
+koopa killed,22125,1-2,6
+jump,22143,1-2,6
+jump,22203,1-2,6
+jump,22263,1-2,6
+koopa killed,22338,1-2,6
+jump,22414,1-2,6
+koopa killed,22421,1-2,6
+jump,22563,1-2,6
+koopa killed,22572,1-2,6
+goomba killed,22577,1-2,6
+jump,22795,1-2,6
+koopa killed,22797,1-2,6
+jump,22856,1-2,6
+coinblock hit,22906,1-2,6
+koopa killed,22909,1-2,6
+jump,22916,1-2,6
+coinblock hit,22972,1-2,6
+jump,22976,1-2,6
+jump,23036,1-2,6
+goomba killed,23052,1-2,6
+goomba killed,23112,1-2,6
+jump,23201,1-2,6
+jump,23266,1-2,6
+jump,23326,1-2,6
+jump,23454,1-2,6
+jump,23619,1-2,6
+fire flower,23667,1-2,6
+jump,23751,1-2,6
+jump,23823,1-2,6
+jump,23883,1-2,6
+jump,23943,1-2,6
+jump,24014,1-2,6
+jump,24079,1-2,6
+koopa killed,24081,1-2,6
+jump,24628,1-2,6
+jump,24689,1-2,6
+jump,24967,1-2,6
+jump,25027,1-2,6
+jump,25094,1-2,6
+jump,25180,1-2,6
+jump,26136,1-3,6
+jump,26196,1-3,6
+jump,26256,1-3,6
+jump,26323,1-3,6
+goomba killed,26360,1-3,6
+jump,26432,1-3,6
+jump,26492,1-3,6
+jump,26557,1-3,6
+jump,26628,1-3,6
+jump,26749,1-3,6
+fire flower,26789,1-3,6
+jump,26824,1-3,6
+jump,26906,1-3,6
+jump,26966,1-3,6
+jump,27036,1-3,6
+jump,27132,1-3,6
+jump,27192,1-3,6
+jump,27281,1-3,6
+jump,27365,1-3,6
+jump,27425,1-3,6
+jump,27931,1-3,6
+jump,28010,1-3,6
+jump,28090,1-3,6
+jump,28182,1-3,6
+jump,28327,1-3,6
+jump,28434,1-3,6
+jump,28529,1-3,6
+jump,28589,1-3,6
+jump,28649,1-3,6
+jump,28709,1-3,6
+jump,28771,1-3,6
+jump,28837,1-3,6
+jump,28906,1-3,6
+jump,29005,1-3,6
+jump,29973,1-4,6
+jump,30235,1-4,6
+jump,30309,1-4,6
+jump,30369,1-4,6
+mushroom,30376,1-4,6
+jump,30429,1-4,6
+jump,30513,1-4,6
+jump,30573,1-4,6
+jump,30852,1-4,6
+jump,30931,1-4,6
+jump,30991,1-4,6
+jump,31093,1-4,6
+jump,31153,1-4,6
+jump,31213,1-4,6
+jump,31273,1-4,6
+jump,31333,1-4,6
+coinblock hit,31386,1-4,6
+jump,31393,1-4,6
+jump,31453,1-4,6
+coinblock hit,31472,1-4,6
+jump,31513,1-4,6
+jump,31587,1-4,6
+jump,32124,1-4,6
+jump,32227,1-4,6
+jump,32287,1-4,6
+mushroom,32347,1-4,6
+jump,32351,1-4,6
+jump,32597,1-4,6
+jump,32891,1-4,6
+jump,32951,1-4,6
+jump,33011,1-4,6
+jump,33118,1-4,6
+coinblock hit,33124,1-4,6
+jump,33200,1-4,6
+jump,33307,1-4,6
+jump,33471,1-4,6
+jump,33531,1-4,6
+jump,33591,1-4,6
+jump,33651,1-4,6
+jump,284,1-1,7
+jump,349,1-1,7
+jump,462,1-1,7
+jump,625,1-1,7
+coinblock hit,640,1-1,7
+jump,686,1-1,7
+mushroom,755,1-1,7
+jump,759,1-1,7
+jump,826,1-1,7
+jump,946,1-1,7
+jump,1053,1-1,7
+jump,1134,1-1,7
+jump,1194,1-1,7
+jump,1254,1-1,7
+jump,1413,1-1,7
+jump,1507,1-1,7
+goomba killed,1514,1-1,7
+jump,1567,1-1,7
+goomba killed,1574,1-1,7
+fire flower,1604,1-1,7
+jump,1627,1-1,7
+jump,1797,1-1,7
+jump,1912,1-1,7
+jump,1988,1-1,7
+jump,2048,1-1,7
+jump,2108,1-1,7
+jump,2183,1-1,7
+jump,2243,1-1,7
+jump,2303,1-1,7
+jump,2373,1-1,7
+jump,2518,1-1,7
+jump,2578,1-1,7
+jump,2638,1-1,7
+jump,2698,1-1,7
+jump,2758,1-1,7
+jump,2818,1-1,7
+jump,2880,1-1,7
+jump,2940,1-1,7
+goomba killed,3036,1-1,7
+jump,3094,1-1,7
+jump,3154,1-1,7
+jump,3214,1-1,7
+jump,3276,1-1,7
+jump,3337,1-1,7
+goomba killed,4918,1-2,7
+koopa killed,4918,1-2,7
+jump,4949,1-2,7
+coinblock hit,4954,1-2,7
+coinblock hit,5002,1-2,7
+jump,5013,1-2,7
+jump,5073,1-2,7
+jump,5149,1-2,7
+jump,5209,1-2,7
+koopa killed,5315,1-2,7
+koopa killed,5473,1-2,7
+goomba killed,5475,1-2,7
+goomba killed,5586,1-2,7
+jump,5656,1-2,7
+koopa killed,5664,1-2,7
+jump,5716,1-2,7
+koopa killed,5724,1-2,7
+jump,5796,1-2,7
+koopa killed,5857,1-2,7
+jump,5878,1-2,7
+goomba killed,6026,1-2,7
+jump,6068,1-2,7
+koopa killed,6076,1-2,7
+coinblock hit,6078,1-2,7
+jump,6161,1-2,7
+goomba killed,6188,1-2,7
+jump,6266,1-2,7
+jump,6448,1-2,7
+jump,6602,1-2,7
+jump,6732,1-2,7
+jump,6828,1-2,7
+jump,6898,1-2,7
+jump,7394,1-2,7
+jump,7454,1-2,7
+jump,7742,1-2,7
+jump,7802,1-2,7
+jump,7870,1-2,7
+jump,8800,1-3,7
+jump,8916,1-3,7
+jump,8993,1-3,7
+jump,9053,1-3,7
+jump,9113,1-3,7
+goomba killed,9264,1-3,7
+goomba killed,9332,1-3,7
+jump,9370,1-3,7
+goomba killed,9392,1-3,7
+jump,9472,1-3,7
+jump,9532,1-3,7
+jump,9592,1-3,7
+jump,9652,1-3,7
+jump,9712,1-3,7
+jump,9772,1-3,7
+jump,10319,1-3,7
+jump,10379,1-3,7
+jump,10454,1-3,7
+jump,10514,1-3,7
+jump,10574,1-3,7
+jump,10650,1-3,7
+jump,10710,1-3,7
+jump,11203,1-3,7
+jump,11263,1-3,7
+jump,11327,1-3,7
+jump,11414,1-3,7
+jump,11561,1-3,7
+jump,11653,1-3,7
+jump,11716,1-3,7
+jump,11776,1-3,7
+jump,11836,1-3,7
+jump,11896,1-3,7
+jump,11956,1-3,7
+jump,12016,1-3,7
+jump,12127,1-3,7
+jump,12941,1-4,7
+jump,13024,1-4,7
+jump,13106,1-4,7
+jump,13166,1-4,7
+jump,13443,1-4,7
+jump,13504,1-4,7
+jump,13575,1-4,7
+jump,13635,1-4,7
+jump,13713,1-4,7
+jump,13773,1-4,7
+jump,13833,1-4,7

@@ -5,7 +5,7 @@ from frame_extractor import extract_all_frames, delete_all_files_in_folder
 def initiate_csv_files():
     """Initiate the csv files for deaths, levels, and events with the correct headers."""
     with open("./data/deaths.csv", "w", newline='') as death_file:
-        fieldnames = ["number", "type", "frame", "level", "video_id"]
+        fieldnames = ["type", "frame", "level", "video_id"]
         writer = csv.DictWriter(death_file, fieldnames=fieldnames)
         writer.writeheader()
     with open("./data/levels.csv", "w", newline='') as level_file:
@@ -13,7 +13,7 @@ def initiate_csv_files():
         writer = csv.DictWriter(level_file, fieldnames=fieldnames)
         writer.writeheader()
     with open("./data/events.csv", "w", newline='') as event_file:
-        fieldnames = ["event", "frame", "time_stamp", "level", "video_id"]
+        fieldnames = ["event", "frame", "level", "video_id"]
         writer = csv.DictWriter(event_file, fieldnames=fieldnames)
         writer.writeheader()
 

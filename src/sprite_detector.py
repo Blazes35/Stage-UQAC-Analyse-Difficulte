@@ -21,8 +21,8 @@ class SpriteDetector:
     the original game resolution (256x234), and analyzed for sprite presence.
     """
 
-    NORMALIZED_WIDTH = 256
-    NORMALIZED_HEIGHT = 234
+    NORMALIZED_WIDTH = 256 # Largeur originale de la projection du jeu Super Mario Bros
+    NORMALIZED_HEIGHT = 234 # Hauteur originale de la projection du jeu Super Mario Bros
     MENU_MATCH_THRESHOLD = 0.5 # Degré de similarité minimum pour détecter le menu principal
     PROJECTION_THRESHOLD = 50 # Seuil de luminosité pour détecter les bords de la projection du jeu
 
@@ -39,7 +39,6 @@ class SpriteDetector:
         self.bottom = 0
         self.is_ready = False
         self.last_death_frame = -1
-        self.death_count = 0
         self.video_id = video_id
         self.events = []
 
@@ -191,7 +190,7 @@ class SpriteDetector:
                 if best_score > 0.95:
                     break
 
-        if best_score > 0.7 and y_value > 205 and x_value < 150:
+        if best_score > 0.8 and y_value > 205 and x_value < 150:
             print(f"pitfall death with score {best_score:.4f}")
             self._write_death(frame_number, "pitfall")
 
@@ -204,19 +203,17 @@ class SpriteDetector:
             death_type (str): Type of death (e.g., "enemy", "fall", etc.).
         """
         self.last_death_frame = frame_number
-        self.death_count += 1
 
         with open("./data/deaths.csv", "a", newline='') as death_file:
-            fieldnames = ["number", "type", "frame", "level", "video_id"]
+            fieldnames = ["type", "frame", "level", "video_id"]
             writer = csv.DictWriter(death_file, fieldnames=fieldnames)
             writer.writerow({
-                "number": self.death_count,
                 "type": death_type,
                 "frame": frame_number,
                 "level": self.current_level,
                 "video_id": self.video_id
             })
-        print(f"Death detected at time {_frame_to_timestamp(frame_number)}, type: {death_type}, total deaths: {self.death_count}")
+        print(f"Death detected at time {_frame_to_timestamp(frame_number)}, type: {death_type}")
         
     def _detect_level(self, image, frame_number: int):
         """
@@ -238,7 +235,7 @@ class SpriteDetector:
             )
 
             max_value = np.max(result)
-            if max_value < 0.95:
+            if max_value < 0.9:
                 continue
 
             if not self.current_level == template.name:
@@ -301,7 +298,7 @@ class SpriteDetector:
         """
         print(f"Writing {len(self.events)} events to CSV file...")
         with open("./data/events.csv", "a", newline='') as event_file:
-            fieldnames = ["event", "frame", "time_stamp", "level", "video_id"]
+            fieldnames = ["event", "frame", "level", "video_id"]
             writer = csv.DictWriter(event_file, fieldnames=fieldnames)
             for event in self.events:
                 if event.level == "Game Over":
@@ -309,7 +306,6 @@ class SpriteDetector:
                 writer.writerow({
                     "event": event.event,
                     "frame": event.frame,
-                    "time_stamp": event.time_stamp,
                     "level": event.level,
                     "video_id": event.video_id
                 })

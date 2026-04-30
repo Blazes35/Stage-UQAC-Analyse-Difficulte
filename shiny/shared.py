@@ -6,7 +6,7 @@ from pathlib import Path
 app_dir = Path(__file__).parent
 
 # Define the path to your SQLite database
-db_path = app_dir.parent / "database" / "Database.sqlite"
+db_path = app_dir / "database" / "Database.sqlite"
 
 
 def load_level_data():

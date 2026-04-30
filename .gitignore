@@ -1,4 +1,4 @@
-src/*pycache*
+*pycache*
 /.venv/
 /.idea/
 /ressources/audios/**

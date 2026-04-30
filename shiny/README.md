@@ -8,6 +8,8 @@ projet/
 ├──dossier_shiny/
     ├── app.py
     ├── shared.py
+    ├── database
+    |   └── Database.sqlite
     └── www/
         ├── Level_1-1.png
         └── Level_1-2.png
@@ -26,7 +28,7 @@ analysed
 ## 🚀 Comment utiliser le projet
 
 ### Étape 1 : Créer la base de données
-Voir le [Database README](../database/README.md)
+Voir le [Database README](./database/README.md)
 
 ### Étape 2 : Préparer les images des niveaux
 

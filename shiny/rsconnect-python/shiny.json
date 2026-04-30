@@ -1,0 +1,12 @@
+{
+    "https://api.shinyapps.io": {
+        "server_url": "https://api.shinyapps.io",
+        "filename": "/home/samuel/UQAC/Projet/Depot/shiny",
+        "app_url": "https://schanal.shinyapps.io/shiny1/",
+        "app_id": "17262864",
+        "app_guid": null,
+        "title": "shiny",
+        "app_mode": "python-shiny",
+        "app_store_version": 1
+    }
+}

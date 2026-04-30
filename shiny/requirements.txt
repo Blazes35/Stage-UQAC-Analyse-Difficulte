@@ -1,0 +1,15 @@
+# Add Python dependencies for the shiny app here
+numpy
+opencv-python
+matplotlib
+librosa
+scipy
+wheel
+shiny
+seaborn
+pandas
+faicons
+shinywidgets
+plotly
+ridgeplot
+palmerpenguins

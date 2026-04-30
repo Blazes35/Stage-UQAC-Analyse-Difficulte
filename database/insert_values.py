@@ -102,19 +102,19 @@ def insert_hardcoded_data(db_filename='Database.sqlite'):
         # ==========================================
         # Format du mapping : {'colonne_dans_le_csv': 'colonne_dans_sql'}
 
-        import_csv_to_sql(conn, 'csv/videos.csv', 'Videos',
+        import_csv_to_sql(conn, '../data/videos.csv', 'Videos',
                           {'id': 'id', 'name': 'name'}
                           )
 
-        import_csv_to_sql(conn, 'csv/events.csv', 'Events',
+        import_csv_to_sql(conn, '../data/events.csv', 'Events',
                           {'event': 'event', 'frame': 'frame', 'level': 'level', 'video_id': 'video_id'}
                           )
 
-        import_csv_to_sql(conn, 'csv/deaths.csv', 'Deaths',
+        import_csv_to_sql(conn, '../data/deaths.csv', 'Deaths',
                           {'type': 'type', 'frame': 'frame', 'level': 'level', 'video_id': 'video_id'}
                           )
 
-        import_csv_to_sql(conn, 'csv/levels.csv', 'Video_Levels',
+        import_csv_to_sql(conn, '../data/levels.csv', 'Video_Levels',
                           {'frame': 'frame', 'level': 'level', 'video_id': 'video_id'}
                           )
 
